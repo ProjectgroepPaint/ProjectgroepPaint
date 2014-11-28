@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.Game1.image=Game1-background.jpg
 class.Game1.superclass=greenfoot.World
 class.Game2.superclass=greenfoot.World
 class.Game3.superclass=greenfoot.World
@@ -58,8 +59,8 @@ dependency9.to=Game4
 dependency9.type=UsesDependency
 mainWindow.height=1000
 mainWindow.width=1296
-mainWindow.x=196
-mainWindow.y=22
+mainWindow.x=-14
+mainWindow.y=0
 package.numDependencies=14
 package.numTargets=10
 project.charset=UTF-8
@@ -182,8 +183,8 @@ target8.x=70
 target8.y=70
 target9.editor.height=700
 target9.editor.width=900
-target9.editor.x=40
-target9.editor.y=20
+target9.editor.x=260
+target9.editor.y=59
 target9.height=50
 target9.name=Game1
 target9.naviview.expanded=true
