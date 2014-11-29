@@ -8,12 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship extends Actor
 {
+    /** Ship speed */
+    private int speed = 5;
+    
     /**
      * Act - do whatever the Ship wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        if (Greenfoot.isKeyDown("left"))
+        {
+            move (-speed); 
+        }
+        if (Greenfoot.isKeyDown("right"))
+        {
+            move (speed); 
+        }
     }    
 }
