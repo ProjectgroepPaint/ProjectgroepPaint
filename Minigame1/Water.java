@@ -19,5 +19,7 @@ public class Water extends World
         super(600, 400, 1);
         // Player
         addObject (new Ship(), 300, 300);
+        //Obstacles
+        addObject (new Rock(), 400, 200);
     }
 }
