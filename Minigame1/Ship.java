@@ -34,5 +34,6 @@ public class Ship extends Actor
         { move(4); }  
         setRotation(0);
 
-    }    
+    }
 }
+    
