@@ -35,5 +35,17 @@ public class Ship extends Actor
         setRotation(0);
 
     }
-}
     
+    public void hitRock()
+    {
+    Actor Rock=getOneIntersectingObject(Rock.class);
+    if(Rock!= null)
+    {
+    World myWorld = getWorld();
+    myWorld.removeObject(this);
+    GameOver gameover= new GameOver();
+    myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+    }
+    
+    }
+}
