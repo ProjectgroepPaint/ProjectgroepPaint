@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import javax.swing.*;
 
 /**
  * Write a description of class Ship here.
@@ -18,6 +19,17 @@ public class Ship extends Actor
      */
     public void act() 
     {
+        if (getX()>785){  
+          JOptionPane.showMessageDialog(new JInternalFrame(), "Click OK to restart","Game over!", JOptionPane.INFORMATION_MESSAGE); 
+          Greenfoot.setWorld(new Water());
+        };
+        if (getX()<25){  
+          getWorld().removeObject(this);
+          JOptionPane.showMessageDialog(new JInternalFrame(), "Click OK to restart","Game over!", JOptionPane.INFORMATION_MESSAGE); 
+          Greenfoot.setWorld(new Water());
+        };
+        
+        
         if (Greenfoot.isKeyDown("left"))
         {
             move (-speed); 
