@@ -17,7 +17,8 @@ public Water()
 { 
 super(800,600, 1);
 addObject (new Ship(), 300, 300);
-
+addObject (new Land(), 20, 300);
+addObject (new Land(), 780, 300);
 
 }
 
@@ -26,8 +27,8 @@ addObject (new Ship(), 300, 300);
 */
 public void act() 
 {
-if(Greenfoot.getRandomNumber(500) < 3) {
-addObject(new Rock(), Greenfoot.getRandomNumber(700), 0); 
+if(Greenfoot.getRandomNumber(500) < 2) {
+addObject(new Rock(), Greenfoot.getRandomNumber(600)+100, 0); 
 }
 }
 }

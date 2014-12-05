@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Dec 03 11:32:12 CET 2014
+#Fri Dec 05 16:05:28 CET 2014
 target4.type=ClassTarget
 <<<<<<<=Updated upstream
 target3.height=50
@@ -29,6 +29,7 @@ target2.typeParameters=
 target3.showInterface=false
 target1.showInterface=false
 target4.editor.width=900
+class.Land.superclass=greenfoot.Actor
 package.numTargets=4
 target1.type=ClassTarget
 target1.typeParameters=
@@ -66,6 +67,7 @@ target3.editor.height=776
 target3.type=ClassTarget
 target4.width=80
 dependency2.from=Water
+class.Land.image=Land.png
 dependency2.type=UsesDependency
 world.lastInstantiated=Water
 mainWindow.height=780
