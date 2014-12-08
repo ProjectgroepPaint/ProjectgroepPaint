@@ -27,7 +27,10 @@ public class Ship extends Actor
         {
             move (speed); 
         }
-      
+        if (Greenfoot.isKeyDown("space"))
+        {
+        Greenfoot.setWorld(new Water());      
+        }
         
         if (getOneIntersectingObject (Rock.class) != null){
             World myWorld = getWorld();
