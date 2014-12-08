@@ -23,5 +23,8 @@ getBackground().drawImage(bgImage, 0, scrollAmount-0*bgImage.getHeight());
 if(Greenfoot.getRandomNumber(200) < 1) {
 addObject(new Rock(), Greenfoot.getRandomNumber(600)+100, 0); 
 }
+if(Greenfoot.getRandomNumber(200) < 1) {
+addObject(new Buoy(), Greenfoot.getRandomNumber(600)+100, 0); 
+}
 }
 }
