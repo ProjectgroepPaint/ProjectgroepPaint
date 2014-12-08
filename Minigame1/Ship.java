@@ -22,18 +22,13 @@ public class Ship extends Actor
                 if (Greenfoot.isKeyDown("left"))
         {
             move (-speed); 
-            turn(3);
+           
         }
         if (Greenfoot.isKeyDown("right"))
         {
             move (speed); 
         }
-        setRotation(90);  
-        if (Greenfoot.isKeyDown("up"))  
-        { move(-4); }  
-        if (Greenfoot.isKeyDown("down"))  
-        { move(4); }  
-        setRotation(0);
+      
         
         if (getOneIntersectingObject (Rock.class) != null){
             World myWorld = getWorld();
