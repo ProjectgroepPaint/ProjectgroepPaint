@@ -19,18 +19,7 @@ public class Ship extends Actor
      */
     public void act() 
     {
-        if (getX()>785){  
-          JOptionPane.showMessageDialog(new JInternalFrame(), "Click OK to restart","Game over!", JOptionPane.INFORMATION_MESSAGE); 
-          Greenfoot.setWorld(new Water());
-        };
-        if (getX()<25){  
-          getWorld().removeObject(this);
-          JOptionPane.showMessageDialog(new JInternalFrame(), "Click OK to restart","Game over!", JOptionPane.INFORMATION_MESSAGE); 
-          Greenfoot.setWorld(new Water());
-        };
-        
-        
-        if (Greenfoot.isKeyDown("left"))
+                if (Greenfoot.isKeyDown("left"))
         {
             move (-speed); 
             turn(3);
@@ -47,6 +36,12 @@ public class Ship extends Actor
         setRotation(0);
         
         if (getOneIntersectingObject (Rock.class) != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            GameOver gameover= new GameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
+        else if (getOneIntersectingObject (Land.class) != null){
             World myWorld = getWorld();
             myWorld.removeObject(this);
             GameOver gameover= new GameOver();
