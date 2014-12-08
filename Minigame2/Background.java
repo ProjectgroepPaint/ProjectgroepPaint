@@ -13,7 +13,7 @@ public class Background extends World
     public Background()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1500, 500, 1);
+        super(1500, 1000, 1);
         // Create new Ships to load containers on to.
         addObject(new Ship(), 10, 10);
         addObject(new Ship2(), 10, 10);
