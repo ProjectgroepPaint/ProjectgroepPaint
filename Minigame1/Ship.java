@@ -41,8 +41,15 @@ public class Ship extends Actor
             GameOver gameover= new GameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
+        else if (getOneIntersectingObject (Buoy.class) != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            GameOver gameover= new GameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
 
     }
+    
     
     public void hitRock()
     {
