@@ -45,6 +45,13 @@ public class Ship extends Actor
         if (Greenfoot.isKeyDown("down"))  
         { move(4); }  
         setRotation(0);
+        
+        if (getOneIntersectingObject (Rock.class) != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            GameOver gameover= new GameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
 
     }
     
