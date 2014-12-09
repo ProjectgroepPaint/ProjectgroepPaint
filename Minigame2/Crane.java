@@ -8,23 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Crane extends Actor
 {
-    private int speed = 8;
-    
     /**
      * Act - do whatever the Crane wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-       
-           if (Greenfoot.isKeyDown("left"))
-        {
-            move (-speed);
-        }
-        if (Greenfoot.isKeyDown("right"))
-        {
-            move (speed); 
-        }
+        // Add your action code here.
     }
     public void spawn_Crane ()
     {
