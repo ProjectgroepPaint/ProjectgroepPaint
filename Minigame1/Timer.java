@@ -7,7 +7,7 @@
          * Act - do whatever the Timer wants to do. This method is called whenever 
          * the 'Act' or 'Run' button gets pressed in the environment. 
          */  
-        private int time = 20;  
+        private int time = 180;  
         private int count = 65;  
         public void act()   
         {  
@@ -36,7 +36,7 @@
           
         private void display()  
         {  
-            setImage(new GreenfootImage("Time left:" + time, 25, Color.GREEN, new Color(0, 0, 0, 0)));    
+            setImage(new GreenfootImage("Time left: " + time, 30, Color.RED, new Color(0, 0, 0, 0)));    
         }  
           
         public void setTime()  
