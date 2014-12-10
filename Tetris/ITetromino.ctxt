@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ITetromino()
+comment1.params=world
+comment1.target=void\ addedToWorld(World)
+comment2.target=void\ setDirection()
+comment3.target=Block\ leftMost()
+comment4.target=Block\ rightMost()
+comment5.target=boolean\ turnPossible()
+comment6.target=int\ genStartX()
+numComments=7

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TetrisWorld()
+comment0.text=\nCreates\ a\ tetris\ world\ with\ 10\ columns\ and\ 22\ rows\n\n
+comment1.params=cols\ rows
+comment1.target=TetrisWorld(int,\ int)
+comment1.text=\nCreates\ a\ tetris\ world\ with\ "cols"\ columns\ and\ "rows"\ rows\n\n@param\ cols\nnumber\ of\ columns\ (>\=\ 9)\n@param\ rows\nnumber\ of\ rows\ (>\=\ 10)\n\n
+comment2.target=TetrisWorld\ getWorld()
+comment3.target=Tetromino\ getCurrentTetromino()
+comment4.params=t
+comment4.target=void\ setCurrentTetromino(Tetromino)
+comment5.target=Tetromino\ genTetromino()
+comment6.params=rows
+comment6.target=void\ newPoints(int)
+comment7.target=int\ getPoints()
+comment8.target=void\ gameOver()
+numComments=9
