@@ -16,7 +16,7 @@ public class Crane extends Actor
      */
     public void act() 
     {
-         if (Greenfoot.isKeyDown("left"))
+             if (Greenfoot.isKeyDown("left"))
         {
             move (-speed);
         }
@@ -24,7 +24,9 @@ public class Crane extends Actor
         {
             move (speed); 
         }
+         
     }
+  
     public void spawn_Crane ()
     {
         boolean spawned = false;

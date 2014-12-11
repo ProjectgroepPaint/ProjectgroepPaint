@@ -20,6 +20,7 @@ public class Background extends World
         // Create new Crane to load containers from Wharf to Ship.
         addObject(new Crane(), 173, 446);
         addObject(new computerCrane(), 988, 446);
+        addObject(new rope(), 270, 472);
         // Create container to be shipped from Wharf to Ship.
         addObject(new Container(), 10, 10);
         // Create the Wharfs on which the Containers will be stacked.
