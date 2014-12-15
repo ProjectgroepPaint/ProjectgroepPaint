@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class computerCrane extends Actor
+public class ComputerCrane extends Actor
 {
     /**
      * Act - do whatever the computerCrane wants to do. This method is called whenever
