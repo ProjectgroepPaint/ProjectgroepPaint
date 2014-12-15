@@ -16,7 +16,7 @@ public class Background extends World
         super(1500, 1000, 1);
         // Create new Ships to load containers on to.
         addObject(new Ship(), 1131, 468);
-        addObject(new Ship2(), 447, 471);
+        addObject(new Ship2(), 407, 468);
         // Create new Crane to load containers from Wharf to Ship.
         addObject(new Crane(), 173, 446);
         addObject(new ComputerCrane(), 988, 446);

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Dec 15 22:22:59 CET 2014
+#Mon Dec 15 22:39:36 CET 2014
 target10.editor.width=960
 target2.width=80
 target8.name=ropewithcontainer
@@ -48,9 +48,9 @@ dependency5.to=Ship
 target4.editor.height=768
 target1.name=Container
 target10.showInterface=false
-class.Rope.image=rope.png
 target7.editor.height=700
 dependency8.from=Background
+class.Rope.image=rope.png
 dependency15.to=Background
 target3.editor.y=25
 target3.editor.x=544
@@ -152,7 +152,7 @@ dependency8.type=UsesDependency
 target1.x=70
 target4.naviview.expanded=true
 target5.typeParameters=
-class.Ship.image=containership.png
+class.Ship.image=ship.png
 <<<<<<<=Updated upstream
 target1.editor.width=683
 dependency2.from=Background
@@ -189,7 +189,7 @@ target7.height=50
 dependency5.type=UsesDependency
 target8.type=ClassTarget
 dependency13.from=rope
-class.Ship2.image=containership.png
+class.Ship2.image=ship.png
 dependency9.type=UsesDependency
 target3.editor.height=1015
 class.Container.image=container.png
