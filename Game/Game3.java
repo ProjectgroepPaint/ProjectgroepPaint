@@ -15,8 +15,7 @@ public class Game3 extends World
      */
     public Game3()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-        addObject(new button5(), 50, 30);
+        super(800,600, 1);
+        addObject(new button5(), 108, 554);
     }
 }
