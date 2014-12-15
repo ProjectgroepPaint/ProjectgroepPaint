@@ -36,4 +36,7 @@ public class rope extends Actor
   
         setRotation(0);
     }    
+
+
+
 }
