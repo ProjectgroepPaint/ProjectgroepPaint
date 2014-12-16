@@ -1,4 +1,7 @@
 #Greenfoot project file
+=\=\=\=\=\=\=
+<<<<<<<=Updated\ upstream
+>>>>>>>=Stashed\ changes
 class.Actor.superclass=
 class.Block.image=red-block.png
 class.Block.superclass=greenfoot.Actor
@@ -146,12 +149,8 @@ target1.editor.width=618
 target1.editor.x=0
 target1.editor.y=0
 target1.height=50
-<<<<<<< Updated upstream
-target1.name=JTetromino
-target1.naviview.expanded=true
-=======
 target1.name=Wall
->>>>>>> Stashed changes
+target1.naviview.expanded=true
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
