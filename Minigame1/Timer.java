@@ -7,14 +7,17 @@
          * Act - do whatever the Timer wants to do. This method is called whenever 
          * the 'Act' or 'Run' button gets pressed in the environment. 
          */  
-        private int time = 180;  
+        private int time = 20;  
         private int count = 65;  
         public void act()   
         {  
             // Add your action code here.  
             if(time == 0)  
             {  
-                return;  
+               finish Finish = new finish();
+               getWorld().addObject(Finish, getX(), getY());
+               
+               
             }  
               
             if(counter())  

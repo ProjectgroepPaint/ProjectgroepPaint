@@ -20,7 +20,7 @@ public class Ship extends Actor
      */
     public void act() 
     {
-                if (Greenfoot.isKeyDown("left"))
+        if (Greenfoot.isKeyDown("left"))
         {
             move (-speed);
         }
