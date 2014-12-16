@@ -7,7 +7,7 @@
          * Act - do whatever the Timer wants to do. This method is called whenever 
          * the 'Act' or 'Run' button gets pressed in the environment. 
          */  
-        private int time = 20;  
+        private int time = 120;  
         private int count = 65;  
         public void act()   
         {  
