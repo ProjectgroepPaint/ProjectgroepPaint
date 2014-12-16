@@ -11,12 +11,12 @@
         private int count = 65;  
         public void act()   
         {  
-            // Add your action code here.  
             if(time == 0)  
             {  
                finish Finish = new finish();
                getWorld().addObject(Finish, getX(), getY());
                World myWorld = getWorld();
+               getWorld().removeObjects(getObjectsInRange(1000, Ship.class));
                myWorld.removeObject(this);
             }  
               

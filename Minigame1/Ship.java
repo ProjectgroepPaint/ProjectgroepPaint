@@ -32,18 +32,21 @@ public class Ship extends Actor
         
         if (getOneIntersectingObject (Rock.class) != null){
             World myWorld = getWorld();
+            getWorld().removeObjects(getObjectsInRange(1000, Timer.class));
             myWorld.removeObject(this);
             GameOver gameover= new GameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
         else if (getOneIntersectingObject (Land.class) != null){
             World myWorld = getWorld();
+            getWorld().removeObjects(getObjectsInRange(1000, Timer.class));
             myWorld.removeObject(this);
             GameOver gameover= new GameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
         else if (getOneIntersectingObject (Buoy.class) != null){
             World myWorld = getWorld();
+            getWorld().removeObjects(getObjectsInRange(1000, Timer.class));
             myWorld.removeObject(this);
             GameOver gameover= new GameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
