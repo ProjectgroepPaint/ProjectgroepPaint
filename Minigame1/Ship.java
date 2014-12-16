@@ -10,7 +10,8 @@ import javax.swing.*;
 public class Ship extends Actor
 {
     /** Ship speed */
-    private int speed = 8;
+    private int speed = 9
+   ;
 
     
     /**
