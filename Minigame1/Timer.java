@@ -16,8 +16,8 @@
             {  
                finish Finish = new finish();
                getWorld().addObject(Finish, getX(), getY());
-               
-               
+               World myWorld = getWorld();
+               myWorld.removeObject(this);
             }  
               
             if(counter())  
