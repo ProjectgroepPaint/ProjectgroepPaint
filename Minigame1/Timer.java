@@ -14,7 +14,7 @@
             if(time == 0)  
             {  
                finish Finish = new finish();
-               getWorld().addObject(Finish, getX(), getY());
+               getWorld().addObject(Finish, 400, 300);
                World myWorld = getWorld();
                getWorld().removeObjects(getObjectsInRange(1000, Ship.class));
                myWorld.removeObject(this);
