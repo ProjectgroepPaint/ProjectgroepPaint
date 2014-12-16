@@ -9,6 +9,7 @@
          */  
         private int time = 20;  
         private int count = 65;  
+        Actor ship = 
         public void act()   
         {  
             // Add your action code here.  
@@ -16,8 +17,7 @@
             {  
                finish Finish = new finish();
                getWorld().addObject(Finish, getX(), getY());
-               
-               
+               getWorld().removeObject(this);
             }  
               
             if(counter())  
