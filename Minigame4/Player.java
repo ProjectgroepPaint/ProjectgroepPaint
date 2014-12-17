@@ -29,25 +29,25 @@ public class Player extends Actor
         
         int groundLevel = getWorld().getHeight() - getImage().getHeight()/2;
         boolean onGround = (getY() == groundLevel);
-        if (!onGround) // in middle of jump
+        if (!onGround) 
         {
-            if (ySpeed == 0 && apexTimer > 0) apexTimer--; // run apex timer
-            if (ySpeed == 0 && apexTimer > 0) return; // apex timer still running
-            ySpeed++; // adds gravity effect
-            setLocation(getX(), getY()+ySpeed); // fall (rising slower or falling faster)
-            if (getY()>=groundLevel) // has landed (reached ground level)
+            if (ySpeed == 0 && apexTimer > 0) apexTimer--; 
+            if (ySpeed == 0 && apexTimer > 0) return; 
+            ySpeed++; 
+            setLocation(getX(), getY()+ySpeed); 
+            if (getY()>=groundLevel) 
             {
-                setLocation(getX(), groundLevel); // set on ground
-                Greenfoot.getKey(); // clears any key pressed during jump
+                setLocation(getX(), groundLevel); 
+                Greenfoot.getKey(); 
            }
         }
-        else // on ground
+        else 
         {
-            if ("space".equals(Greenfoot.getKey())) // jump key detected
+            if ("space".equals(Greenfoot.getKey()))
             {
-                ySpeed = -15; // add jump speed
-                setLocation(getX(), getY()+ySpeed); // leave ground
-                apexTimer = 100;  // set apex timer (adjust value to suit)
+                ySpeed = -15; 
+                setLocation(getX(), getY()+ySpeed); 
+                apexTimer = 100;  
             }
         }
     
