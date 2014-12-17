@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Dec 17 11:13:13 CET 2014
+#Wed Dec 17 11:24:58 CET 2014
 target1.editor.x=40
 target1.type=ClassTarget
 project.charset=UTF-8
@@ -11,20 +11,20 @@ class.Player.image=m4player.png
 target1.typeParameters=
 world.lastInstantiated=Warehouse
 target1.height=50
-class.Warehouse.image=brick.jpg
 mainWindow.y=71
 target1.width=90
+class.Warehouse.image=brick.jpg
 class.Warhouse.image=brick.jpg
 mainWindow.x=201
 target1.editor.height=700
-target1.editor.width=900
 package.numDependencies=0
-class.Warehouse.superclass=greenfoot.World
+target1.editor.width=900
 target1.y=10
+class.Warehouse.superclass=greenfoot.World
 target1.x=70
-mainWindow.width=1046
 package.numTargets=1
+mainWindow.width=1046
 target1.name=Warhouse
 target1.showInterface=false
-class.Player.superclass=greenfoot.Actor
 target1.editor.y=43
+class.Player.superclass=greenfoot.Actor

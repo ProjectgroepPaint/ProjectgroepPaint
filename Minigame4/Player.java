@@ -21,10 +21,12 @@ public class Player extends Actor
          if (Greenfoot.isKeyDown("left"))
         {
             move (-speed);
+            setImage("m4player-left.png");
         }
         if (Greenfoot.isKeyDown("right"))
         {
             move (speed); 
+            setImage("m4player.png");
         }
         
         int groundLevel = getWorld().getHeight() - getImage().getHeight()/2;
@@ -47,7 +49,7 @@ public class Player extends Actor
             {
                 ySpeed = -15; 
                 setLocation(getX(), getY()+ySpeed); 
-                apexTimer = 100;  
+                apexTimer = 5;  
             }
         }
     
