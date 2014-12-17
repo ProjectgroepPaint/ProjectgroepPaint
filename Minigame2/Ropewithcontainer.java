@@ -9,6 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ropewithcontainer extends Actor
 {
     private int speed = 8;
+    Container container = new Container();
+    private Background background;
+    
+    public void addedToWorld(World world) 
+    {
+       background = (Background) world; 
+    }
     public void act() 
     {
         if (Greenfoot.isKeyDown("left"))
@@ -27,5 +34,10 @@ public class Ropewithcontainer extends Actor
         {move(4);}
   
         setRotation(0);// Add your action code here.
+        if (Greenfoot.isKeyDown("space"))
+        {getWorld().addObject(container, getX(), getY()+187);
+         background.addObject(new Rope(), getX(), getY());
+         background.removeObject(this);
+        }
     }    
 }
