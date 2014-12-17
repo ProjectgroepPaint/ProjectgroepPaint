@@ -6,16 +6,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Warhouse extends World
+public class Warehouse extends World
 {
 
     /**
      * Constructor for objects of class Warhouse.
      * 
      */
-    public Warhouse()
+    public Warehouse()
     {    
         super(800, 600, 1); 
-        
+        addObject (new Player(), 100, 575);
     }
 }
