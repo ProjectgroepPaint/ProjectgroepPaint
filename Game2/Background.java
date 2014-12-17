@@ -5,6 +5,7 @@ public class Background extends World
     private int score = 0;
     private int score2 = 0;
     private int Time = 0;
+    private int I = 0;
     public Background()
     {    
         super(1500, 1000, 1);
@@ -29,25 +30,28 @@ public class Background extends World
         this.showText("Score: " + String.valueOf(score2), 1000, 200);
     }
     public void act() {
-        if (actCount > 0) {
-            actCount--;
-        } else {
-           if (Math.random() > 0.2) {
+        if (I==0)
+        {
+        if (actCount > 0)
+            {actCount--;}
+        else {
+                if (Math.random() > 0.2) {
                addObject(new Container(), 0, 775);
               } else {
                addObject(new ContainerBig(), 0, 775);
               }
-           actCount = 150;
-        }
-        if (actCount > 0) {
-            actCount--;
-        } else {
+              actCount = 150;
+             }
+        if (actCount > 0)
+            {actCount--;}
+        else {
            if (Math.random() > 0.2) {
                addObject(new ContainerL(), 1500, 875);
               } else {
                addObject(new ContainerBigL(), 1500, 875);
               }
-           actCount = 150;
+              actCount = 150;
+            }
         }
         if (Time > 0)
         {
@@ -66,6 +70,7 @@ public class Background extends World
             addObject(new Win(), 400, 300);
             addObject(new Win(), 1100, 300);
             }
+            I = 1;
         }
     }
     public void addScore(int n) {

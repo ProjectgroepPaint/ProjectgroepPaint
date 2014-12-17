@@ -4,6 +4,6 @@ public class Win extends Actor
 {
     public void act() 
     {
-        // Add your action code here.
+        getWorld().removeObjects(getObjectsInRange(1000000, MovingContainers.class));
     }    
 }
