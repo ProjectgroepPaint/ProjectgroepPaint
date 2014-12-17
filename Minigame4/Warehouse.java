@@ -11,6 +11,7 @@ public class Warehouse extends World
     public Warehouse()
     {    
         super(800, 600, 1); 
-        addObject (new Player(), 100, 575);
+        addObject (new Player(), 100, 570);
+        addObject (new containerSide(), 400, 560);
     }
 }
