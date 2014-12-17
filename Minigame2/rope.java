@@ -40,7 +40,7 @@ public class Rope extends Actor
         setRotation(0);
         
         
-        if (getOneIntersectingObject (Container.class) != null)
+        if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (Container.class) != null)
         {
             background.addObject(new Ropewithcontainer(), getX(), getY());
             background.removeObject(this);
