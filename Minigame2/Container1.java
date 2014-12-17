@@ -12,7 +12,7 @@ public class Container1 extends Actor
      * Act - do whatever the Container1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public int i = 0;
+    public int i = 2;
     public void act() 
     {
         setLocation(getX(), getY() + i);
@@ -20,8 +20,9 @@ public class Container1 extends Actor
            i = 0;
            return;
         };
-        if (getY()<564){  
-           i = 2;
+        if (getOneIntersectingObject (Container1.class) != null)
+        {
+           i = 0;
            return;
         };
     }    
