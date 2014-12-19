@@ -2,8 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class FallingContainers extends Actor
 {
-    public void act() 
+    public final int Fallingspeed = 2;
+    public void Fallingcontainer() 
     {
-        // Add your action code here.
+        setLocation(getX(), getY() + Fallingspeed);
     }    
 }

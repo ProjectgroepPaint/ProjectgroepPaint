@@ -2,47 +2,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Hook2 extends Rope2
 {
-    private int speed = 8;
-    private Background background;
-    
+    private Background Scene;
     public void addedToWorld(World world) 
-    {
-       background = (Background) world; 
-    }
-    
-    
+    {Scene = (Background) world;}
+        
     public void act() 
     {
-        if (Greenfoot.isKeyDown("A") && getX()>933)
-        {move (-speed); turn(3);}
-
-        if (Greenfoot.isKeyDown("D") && getX()<1250)
-        {move (speed);}
-
-        setRotation(90);
-
-  
-        if (Greenfoot.isKeyDown("W")&& getY()>325)  
-        {move(-4);}
-  
-        if (Greenfoot.isKeyDown("S"))  
-        {move(4);}
-  
-        setRotation(0);
-        
+        Ropemove();        
         
         if (Greenfoot.isKeyDown("Q") && getOneIntersectingObject (Container.class) != null)
         {
-            background.addObject(new Hookwithcontainer2(), getX(), getY());
+            Scene.addObject(new Hookwithcontainer2(), getX(), getY());
             getWorld().removeObjects(getObjectsInRange(50, Container.class));
-            background.removeObject(this);
+            Scene.removeObject(this);
             
         }
         else if (Greenfoot.isKeyDown("Q") && getOneIntersectingObject (ContainerBig.class) != null)
         {
-            background.addObject(new Hookwithbigcontainer2(), getX(), getY());
+            Scene.addObject(new Hookwithbigcontainer2(), getX(), getY());
             getWorld().removeObjects(getObjectsInRange(80, ContainerBig.class));
-            background.removeObject(this);
+            Scene.removeObject(this);
             
         } 
     }

@@ -1,20 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Crane2 extends Actor
+public class Crane2 extends Cranes
 {
-    private int speed = 8;
-    
+    private int minimum_offset = 836;
+    private int maximum_offset = 1153;
     public void act() 
     {
-        getWorld().removeObjects(getObjectsInRange(100, ComputerCrane.class));
+        getWorld().removeObjects(getObjectsInRange(1000, AICrane.class));
+        getWorld().removeObjects(getObjectsInRange(1000, AIRope.class));
+        getWorld().removeObjects(getObjectsInRange(1000, AIHook.class));
         getWorld().removeObjects(getObjectsInRange(10000, Button.class));
-        if (Greenfoot.isKeyDown("A") && getX()>836)
+        if (Greenfoot.isKeyDown("A") && getX()>minimum_offset || Greenfoot.isKeyDown("D") && getX()<maximum_offset)
         {
-            move (-speed);
-        }
-        if (Greenfoot.isKeyDown("D") && getX()<1153)
-        {
-            move (speed); 
-        }    
+            Cranemove2 (velocity);
+        }  
     }
 }

@@ -2,24 +2,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rope extends Crane
 {
-    private int speed = 8;
-    
-    public void act() 
+    public int minimum_offset = 209;
+    public int maximum_offset = 526;
+    private final int VERTICAL_MOVEMENT = 4;
+    public void act()
     {
-        if (Greenfoot.isKeyDown("left") && getX()>209)
-        {move (-speed); turn(3);}
-
-        if (Greenfoot.isKeyDown("right") && getX()<526)
-        {move (speed);}
-
+        Ropemove();
+    }
+    public void Ropemove() 
+    {
+        if (Greenfoot.isKeyDown("left") && getX()>minimum_offset || Greenfoot.isKeyDown("right") && getX()<maximum_offset)
+        {Cranemove (velocity);}
+        
+        // Method call to force the rope to stay vertical
         setRotation(90);
   
         if (Greenfoot.isKeyDown("up"))  
-        {move(-4);}
-  
+        {move(-VERTICAL_MOVEMENT);}
         if (Greenfoot.isKeyDown("down"))  
-        {move(4);}
-  
+        {move(VERTICAL_MOVEMENT);}
+        
+        // Method call to force the rope to stay vertical
         setRotation(0);
     }
 }

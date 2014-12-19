@@ -10,21 +10,24 @@ public class Background extends World
     {    
         super(1500, 1000, 1);
         
-        addObject(new Ship2(), 1131, 468);
+        addObject(new Ship(), 1131, 468);
         addObject(new Ship(), 407, 468);
         
         addObject(new Crane(), 173, 446);
-        addObject(new ComputerCrane(), 897, 446);
-        
         addObject(new Rope(), 270, 472);
         addObject(new Hook(), 270, 672);
+        
+        
+        addObject(new AICrane(), 897, 446);
+        addObject(new AIRope(), 994, 472);
+        addObject(new AIHook(), 994, 672);
+        
+        
         addObject(new Sky(), 600, 144);
-        
         addObject(new Button(), 25, 50);
-        
         addObject (new Timer(), 750, 100);
                
-        setPaintOrder(Win.class,Lose.class,Timer.class,Button.class,Crane.class,Crane2.class,ComputerCrane.class,Sky.class,Rope.class,Rope2.class,Ship.class,Ship2.class);
+        setPaintOrder(Win.class,Lose.class,Timer.class,Button.class,Crane.class,Crane2.class,AICrane.class,Sky.class,Rope.class,Rope2.class,AIRope.class,Ship.class);
         
         this.showText("Score: " + String.valueOf(score), 400, 200);
         this.showText("Score: " + String.valueOf(score2), 1000, 200);
@@ -35,7 +38,7 @@ public class Background extends World
         if (actCount > 0)
             {actCount--;}
         else {
-                if (Math.random() > 0.2) {
+              if (Math.random() > 0.2) {
                addObject(new Container(), 0, 775);
               } else {
                addObject(new ContainerBig(), 0, 775);
@@ -50,7 +53,7 @@ public class Background extends World
               } else {
                addObject(new ContainerBigL(), 1500, 875);
               }
-              actCount = 150;
+           actCount = 150;
             }
         }
         if (Time > 0)
