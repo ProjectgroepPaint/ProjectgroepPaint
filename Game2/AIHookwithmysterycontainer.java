@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class AIHookwithcontainer extends AIHook
+public class AIHookwithmysterycontainer extends AIHook
 {
     private Background Scene;
     public void setVERTICAL_MOVEMENT()
@@ -29,7 +29,7 @@ public class AIHookwithcontainer extends AIHook
             stopmoveLeft();
         }
         if (getY()<563 && getOneIntersectingObject (ContaineronShip.class) == null)
-        {getWorld().addObject(new Container1(), getX(), getY());
+        {getWorld().addObject(new Container4(), getX(), getY());
          Scene.addObject(new AIHook(), getX(), getY());
          Scene.removeObject(this);
         }

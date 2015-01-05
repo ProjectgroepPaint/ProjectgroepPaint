@@ -3,7 +3,7 @@ import java.awt.Color;
       
 public class Timer extends Actor  
 {  
-       private int time = 120;  
+       private int time = 60;  
        private int count = 60;  
        public void act()   
        {  

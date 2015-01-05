@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Container2 extends FallingContainers
+public class Container3 extends FallingContainers
 {
     private Background Scene;
     
@@ -13,15 +13,15 @@ public class Container2 extends FallingContainers
         Fallingcontainer();
         if (getY()>563 || getOneIntersectingObject (ContaineronShip.class) != null)
         {  
-            Scene.addObject(new ContaineronShip2(), getX(), getY());
+            Scene.addObject(new ContaineronShip3(), getX(), getY());
             
             if (getX()<700)
             {
-                ((Background) this.getWorld()).addScore(40);
+                ((Background) this.getWorld()).addScore(-30);
             }
             else
             {
-                ((Background) this.getWorld()).addScore2(40);
+                ((Background) this.getWorld()).addScore2(-30);
             }
             Scene.removeObject(this);
         } 

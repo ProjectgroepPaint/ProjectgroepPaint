@@ -10,7 +10,7 @@ public class Hookwithcontainer2 extends Hook2
     }
     public void act() 
     {
-        Ropemove();
+        Hookmove();
         if (getY()<563 && Greenfoot.isKeyDown("Q") && getOneIntersectingObject (ContaineronShip.class) == null)
         {getWorld().addObject(new Container1(), getX(), getY());
          Scene.addObject(new Hook2(), getX(), getY());

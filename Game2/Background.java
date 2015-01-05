@@ -14,12 +14,12 @@ public class Background extends World
         addObject(new Ship(), 407, 468);
         
         addObject(new Crane(), 173, 446);
-        addObject(new Rope(), 270, 472);
+        addObject(new Rope(), 283, 333);
         addObject(new Hook(), 270, 672);
         
         
         addObject(new AICrane(), 897, 446);
-        addObject(new AIRope(), 994, 472);
+        addObject(new AIRope(), 1007, 333);
         addObject(new AIHook(), 994, 672);
         
         
@@ -35,26 +35,34 @@ public class Background extends World
     public void act() {
         if (I==0)
         {
-        if (actCount > 0)
+           if (actCount > 0)
             {actCount--;}
-        else {
-              if (Math.random() > 0.2) {
+            else {
+              if (Math.random() > 0.3) {
                addObject(new Container(), 0, 775);
+              } else if (Math.random() > 0.5) {
+                  addObject(new ContainerBig(), 0, 775);
+              } else if (Math.random() > 0.5) {
+                  addObject(new NuclearContainer(), 0, 775);
               } else {
-               addObject(new ContainerBig(), 0, 775);
+                   addObject(new MysteryContainer(), 0, 775);
               }
               actCount = 150;
-             }
-        if (actCount > 0)
+           }
+           if (actCount > 0)
             {actCount--;}
-        else {
-           if (Math.random() > 0.2) {
+            else {
+              if (Math.random() > 0.3) {
                addObject(new ContainerL(), 1500, 875);
+              } else if (Math.random() > 0.5) {
+                  addObject(new ContainerBigL(), 1500, 875);
+              } else if (Math.random() > 0.5) {
+                  addObject(new NuclearContainerL(), 1500, 875);
               } else {
-               addObject(new ContainerBigL(), 1500, 875);
+                   addObject(new MysteryContainerL(), 1500, 875);
               }
-           actCount = 150;
-            }
+              actCount = 150;
+           }
         }
         if (Time > 0)
         {
