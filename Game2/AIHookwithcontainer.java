@@ -5,8 +5,8 @@ public class AIHookwithcontainer extends AIHook
     private Background Scene;
     public void setVERTICAL_MOVEMENT()
     {
-        if (getY()>340)
-        {VERTICAL_MOVEMENT = -6;}
+        if (getY()>385)
+        {VERTICAL_MOVEMENT = -4;}
         else {VERTICAL_MOVEMENT = 0;}
     }
     public static int getVERTICAL_MOVEMENT()
@@ -21,19 +21,15 @@ public class AIHookwithcontainer extends AIHook
     {
         setVERTICAL_MOVEMENT();
         AICrane.getmoveRight();
-        AICrane.getmoveLeft();
-        Hookmove();
-        if (getY()<650 && getOneIntersectingObject (ContaineronShip.class) == null)
-        {
-            stopmoveRight();
-            stopmoveLeft();
-        }
+        Ropemove();
+        if (getY()>400 && getOneIntersectingObject (ContaineronShip.class) == null)
+        {stopmoveRight();}
         if (getY()<563 && getOneIntersectingObject (ContaineronShip.class) == null)
         {getWorld().addObject(new Container1(), getX(), getY());
          Scene.addObject(new AIHook(), getX(), getY());
          Scene.removeObject(this);
         }
-        else if (getY() <350 && getOneIntersectingObject (ContaineronShip.class) != null)
+        else if (getY() <390 && getOneIntersectingObject (ContaineronShip.class) != null)
         {setmoveRight();}
     }    
 }

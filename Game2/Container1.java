@@ -17,11 +17,11 @@ public class Container1 extends FallingContainers
             
             if (getX()<700)
             {
-                ((Background) this.getWorld()).addScore(20);
+                ((Background) this.getWorld()).addScore(10);
             }
             else
             {
-                ((Background) this.getWorld()).addScore2(20);
+                ((Background) this.getWorld()).addScore2(10);
             }
             Scene.removeObject(this);
         } 

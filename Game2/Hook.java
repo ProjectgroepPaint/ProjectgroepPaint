@@ -11,31 +11,19 @@ public class Hook extends Rope
         
     public void act() 
     {
-        Hookmove();        
+        Ropemove();        
         
         if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (Container.class) != null)
         {
             Scene.addObject(new Hookwithcontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(Container.class));
+            getWorld().removeObjects(getObjectsInRange(50, Container.class));
             Scene.removeObject(this);            
         }
         else if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (ContainerBig.class) != null)
         {
             Scene.addObject(new Hookwithbigcontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(ContainerBig.class));
+            getWorld().removeObjects(getObjectsInRange(80, ContainerBig.class));
             Scene.removeObject(this);            
-        }
-        else if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (MysteryContainer.class) != null)
-        {
-            Scene.addObject(new Hookwithmysterycontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(MysteryContainer.class));
-            Scene.removeObject(this);            
-        }
-        else if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (NuclearContainer.class) != null)
-        {
-            Scene.addObject(new Hookwithnuclearcontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(NuclearContainer.class));
-            Scene.removeObject(this);            
-        }
+        } 
     }
 }

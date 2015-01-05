@@ -16,18 +16,9 @@ public class AICrane extends Cranes
         moveRight = false;
         return moveRight;
     }
-    public static boolean stopmoveLeft()
-    {
-        moveLeft = false;
-        return moveLeft;
-    }
     public static boolean getmoveRight()
     {
         return moveRight;
-    }
-    public static boolean getmoveLeft()
-    {
-        return moveLeft;
     }
     
     public void act() 

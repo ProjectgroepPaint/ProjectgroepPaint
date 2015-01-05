@@ -19,31 +19,22 @@ public class AIHook extends AIRope
     {
         AICrane.getmoveRight();
         setVERTICAL_MOVEMENT();
-        Hookmove();
+        Ropemove();
         setmoveRight();
         
         if (getOneIntersectingObject (Container.class) != null)
         {
             Scene.addObject(new AIHookwithcontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(Container.class));
+            getWorld().removeObjects(getObjectsInRange(50, Container.class));
             Scene.removeObject(this);
             
         }
         else if (getOneIntersectingObject (ContainerBig.class) != null)
         {
             Scene.addObject(new AIHookwithbigcontainer(), getX(), getY());
-            getWorld().removeObjects(getIntersectingObjects(ContainerBig.class));
+            getWorld().removeObjects(getObjectsInRange(80, ContainerBig.class));
             Scene.removeObject(this);
             
-        }
-        else if (getOneIntersectingObject (MysteryContainer.class) != null)
-        {
-            if (Math.random() > 0.98)
-            {
-                Scene.addObject(new AIHookwithmysterycontainer(), getX(), getY());
-                getWorld().removeObjects(getIntersectingObjects(MysteryContainer.class));
-                Scene.removeObject(this);
-            }
-        }
+        } 
     }
 }
