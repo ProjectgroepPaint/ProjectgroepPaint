@@ -13,9 +13,5 @@ comment5.params=
 comment5.target=int\ getValue()
 comment6.params=
 comment6.target=void\ updateImage()
-<<<<<<< Updated upstream
 comment6.text=\r\n\ Make\ the\ image\r\n
-=======
-comment6.text=\n\ Make\ the\ image\n
->>>>>>> Stashed changes
 numComments=7

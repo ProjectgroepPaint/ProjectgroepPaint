@@ -1,18 +1,10 @@
 #BlueJ class context
 comment0.params=score
 comment0.target=ScoreBoard(int)
-<<<<<<< Updated upstream
 comment0.text=\r\n\ Create\ a\ score\ board\ for\ the\ final\ result.\r\n
-=======
-comment0.text=\n\ Create\ a\ score\ board\ for\ the\ final\ result.\n
->>>>>>> Stashed changes
 comment1.params=world
 comment1.target=void\ addedToWorld(greenfoot.World)
 comment2.params=title\ prefix\ score
 comment2.target=void\ makeImage(java.lang.String,\ java.lang.String,\ int)
-<<<<<<< Updated upstream
 comment2.text=\r\n\ Make\ the\ score\ board\ image.\r\n
-=======
-comment2.text=\n\ Make\ the\ score\ board\ image.\n
->>>>>>> Stashed changes
 numComments=3
