@@ -1,38 +1,98 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * The world subclass for the background and actors.
- */
 public class Background extends World
 {
-
-    /**
-     * Constructor for objects of class Port.
-     * 
-     */
+    private int actCount = 0;
+    private int score = 0;
+    private int score2 = 0;
+    private int Time = 0;
+    private int I = 0;
     public Background()
     {    
         super(1500, 1000, 1);
-        // Create new Ships to load containers on to.
-        addObject(new Ship(), 1131, 468);
-        addObject(new Ship2(), 407, 468);
-        // Create new Crane to load containers from Wharf to Ship.
-        addObject(new Crane(), 173, 446);
-        addObject(new ComputerCrane(), 988, 446);
-        addObject(new Rope(), 270, 472);
-       
-        // Create the Wharfs on which the Containers will be stacked.
-        addObject(new Wharf(), 10, 10);
-        addObject(new Wharf2(), 10, 10);
         
-        setPaintOrder(Rope.class,Ropewithcontainer.class,Crane.class,Ship2.class,Container1.class);
-
+        addObject(new Ship(), 1131, 468);
+        addObject(new Ship(), 407, 468);
+        
+        addObject(new Crane(), 173, 446);
+        addObject(new Rope(), 283, 333);
+        addObject(new Hook(), 270, 672);
+        
+        
+        addObject(new AICrane(), 897, 446);
+        addObject(new AIRope(), 1007, 333);
+        addObject(new AIHook(), 994, 672);
+        
+        
+        addObject(new Sky(), 600, 144);
+        addObject(new Button(), 25, 50);
+        addObject (new Timer(), 750, 100);
+               
+        setPaintOrder(Win.class,Lose.class,Timer.class,Button.class,Crane.class,Crane2.class,AICrane.class,Sky.class,Rope.class,Rope2.class,AIRope.class,Ship.class);
+        
+        this.showText("Score: " + String.valueOf(score), 400, 200);
+        this.showText("Score: " + String.valueOf(score2), 1000, 200);
     }
-    public void act() 
-    {
-        if(Greenfoot.getRandomNumber(200) < 2)
+    public void act() {
+        if (I==0)
         {
-            addObject(new Container(), 0, 795);
+           if (actCount > 0)
+            {actCount--;}
+            else {
+              if (Math.random() > 0.3) {
+               addObject(new Container(), 0, 775);
+              } else if (Math.random() > 0.5) {
+                  addObject(new ContainerBig(), 0, 775);
+              } else if (Math.random() > 0.5) {
+                  addObject(new NuclearContainer(), 0, 775);
+              } else {
+                   addObject(new MysteryContainer(), 0, 775);
+              }
+              actCount = 150;
+           }
+           if (actCount > 0)
+            {actCount--;}
+            else {
+              if (Math.random() > 0.3) {
+               addObject(new ContainerL(), 1500, 875);
+              } else if (Math.random() > 0.5) {
+                  addObject(new ContainerBigL(), 1500, 875);
+              } else if (Math.random() > 0.5) {
+                  addObject(new NuclearContainerL(), 1500, 875);
+              } else {
+                   addObject(new MysteryContainerL(), 1500, 875);
+              }
+              actCount = 150;
+           }
         }
+        if (Time > 0)
+        {
+            if (score>score2)
+            {
+            addObject(new Win(), 400, 300);
+            addObject(new Lose(), 1100, 300);
+            }
+            if (score2>score)
+            {
+            addObject(new Lose(), 400, 300);
+            addObject(new Win(), 1100, 300);
+            }
+            if (score2==score)
+            {
+            addObject(new Win(), 400, 300);
+            addObject(new Win(), 1100, 300);
+            }
+            I = 1;
+        }
+    }
+    public void addScore(int n) {
+        this.score = score + n;
+        this.showText("Score: " + String.valueOf(score), 400, 200);
+    }
+    public void addScore2(int m) {
+        this.score2 = score2 + m;
+        this.showText("Score: " + String.valueOf(score2), 1000, 200);
+    }
+    public void End(int l) {
+        this.Time = Time + l;
     }
 }

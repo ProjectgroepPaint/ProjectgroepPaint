@@ -1,29 +1,29 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Container1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Container1 extends Actor
+public class Container1 extends FallingContainers
 {
-    /**
-     * Act - do whatever the Container1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public int i = 2;
+    private Background Scene;
+    
+    public void addedToWorld(World world) 
+    {
+       Scene = (Background) world; 
+    }    
     public void act() 
     {
-        setLocation(getX(), getY() + i);
-        if (getY()>563){  
-           i = 0;
-           return;
-        };
-        if (getOneIntersectingObject (Container1.class) != null)
-        {
-           i = 0;
-           return;
-        };
-    }    
+        Fallingcontainer();        
+        if (getY()>563 || getOneIntersectingObject (ContaineronShip.class) != null)
+        {  
+            Scene.addObject(new ContaineronShip1(), getX(), getY());
+            
+            if (getX()<700)
+            {
+                ((Background) this.getWorld()).addScore(20);
+            }
+            else
+            {
+                ((Background) this.getWorld()).addScore2(20);
+            }
+            Scene.removeObject(this);
+        } 
+    }
 }
