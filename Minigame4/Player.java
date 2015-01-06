@@ -10,13 +10,17 @@ public class Player extends Actor
 {
     /**Speed of Player*/
     private int speed = 5;
+    
+    /**Jump**/
     private int ySpeed;
     private int apexTimer;
-    /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
+    {
+        checkKey();
+    }
+    
+    public void checkKey()
     {
          if (Greenfoot.isKeyDown("left"))
         {
@@ -52,8 +56,32 @@ public class Player extends Actor
                 apexTimer = 5;  
             }
         }
-    
     }
     
-    
+    public boolean onFloor()
+    {
+        Actor below = getOneObjectAtOffset (0, getImage().getHeight()/2, containerSide2.class);  
+        return below != null; 
+    }
+ 
+    public void checkFall()
+    {
+        if (onFloor())
+        {
+            Actor below = getOneObjectAtOffset (0, getImage().getHeight()/2, containerSide2.class);
+            setLocation(below.getX(), below.getY());
+        }
+        else
+        {
+ 
+        }
+    }
+ 
+    public void fall()
+    {
+        if (!onFloor())
+        {
+            setLocation(getX(), getY() - ySpeed);
+        }
+    }
 }
