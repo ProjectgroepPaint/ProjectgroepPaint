@@ -39,7 +39,7 @@ public class Player extends Actor
             moveLeft();
             setImage("m4player-left.png");
         }
-        if(Greenfoot.isKeyDown("up") && jumping == false)
+        if((Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space")) && jumping == false)
         {
             jump();
         }

@@ -9,7 +9,7 @@ public class Level01 extends Level
     public void setFields()
     {
         map = new String[] { "                         ",
-                             "                         ",
+                             " m                       ",
                              "ppp                      ",
                              "                         ",
                              "                         ",
