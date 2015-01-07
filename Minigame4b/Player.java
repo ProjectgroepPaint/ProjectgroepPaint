@@ -22,6 +22,7 @@ public class Player extends Actor
         platformAbove();
         checkRightWalls();
         checkLeftWalls();
+        checkHit();
     }   
     
     public void checkKey()
@@ -30,11 +31,13 @@ public class Player extends Actor
         {
             direction = 1;
             moveRight();
+            setImage("m4player.png");
         }
         if(Greenfoot.isKeyDown("left"))
         {
             direction = -1;
             moveLeft();
+            setImage("m4player-left.png");
         }
         if(Greenfoot.isKeyDown("up") && jumping == false)
         {
@@ -178,5 +181,13 @@ public class Player extends Actor
         fall();
     }
     
-    
+    public void checkHit() 
+    {
+    if (getOneIntersectingObject (Monster.class) != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            gameOver gameover= new gameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
+    }
 }

@@ -18,6 +18,7 @@ public abstract class Level extends World
                 if (kind == 1) actor = new Block();
                 if (kind == 2) actor = new Platform2();
                 if (kind == 3) actor = new Wall();
+                if (kind == 4) actor = new Monster();
                 addObject(actor, 16+j*32, 16+i*32);
         }
     }
