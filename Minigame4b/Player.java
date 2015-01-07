@@ -183,7 +183,13 @@ public class Player extends Actor
     
     public void checkHit() 
     {
-    if (getOneIntersectingObject (Monster.class) != null){
+    if (getOneIntersectingObject (RadioactiveBarrel.class) != null){
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            gameOver gameover= new gameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
+    else if (getOneIntersectingObject (Hook.class) != null){
             World myWorld = getWorld();
             myWorld.removeObject(this);
             gameOver gameover= new gameOver();

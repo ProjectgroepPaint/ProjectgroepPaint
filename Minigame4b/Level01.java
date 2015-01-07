@@ -3,28 +3,28 @@ import greenfoot.Greenfoot;
 public class Level01 extends Level
 {
     /** ********************      MAP LEGEND     *********************** */
-    //      b = block        m = monster         f = floating platform
-    //      p = platform     k = key             w = wall
-    //      c = character    d = door            s = score
+    //      b = block        r = radioactive barrel     
+    //      p = platform     1 = container variety 1         
+    //      c = character    h = hook          
     public void setFields()
     {
         map = new String[] { "                         ",
-                             " m                       ",
+                             "  h                      ",
                              "ppp                      ",
                              "                         ",
                              "                         ",
                              "     pp                  ",
-                             "                         ",
+                             "                 r       ",
                              "             ppppppppp   ",
                              "                         ",
                              "        pp               ",
                              "                         ",
-                             "               m         ",
+                             "               r         ",
                              "             pppp        ",
-                             "  ppppp                  ",
+                             "  ppppp               r  ",
                              "                     ppp ",
                              "                         ",
-                             "   c      w         w    ",
+                             "   c      1         1    ",
                              "                         ",
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
     }
