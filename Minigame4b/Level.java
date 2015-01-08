@@ -22,9 +22,20 @@ public abstract class Level extends World
                 if (kind == 5) actor = new Hook();
                 addObject(actor, 16+j*32, 16+i*32);
         }
+        
+        setPaintOrder(
+        gameOver.class,
+        Hook.class, 
+        Player.class,
+        RadioactiveBarrel.class, 
+        Platform2.class, 
+        Container.class, 
+        Block.class
+        );
     }
-
+    
     public void setFields() {}
 
     public void nextLevel() {}
+   
 }
