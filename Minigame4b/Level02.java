@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 
-public class Level01 extends Level
+public class Level02 extends Level
 {
     /** ********************      MAP LEGEND     *********************** */
     //      b = block        r = radioactive barrel     
@@ -10,27 +10,22 @@ public class Level01 extends Level
     {
         map = new String[] { "                         ",
                              "h                        ",
+                             "ppp                      ",
                              "                         ",
                              "                         ",
+                             "     pp                  ",
+                             "                 r       ",
+                             "             ppppppppp   ",
                              "                         ",
-                             "   c                     ",
-                             "pppppp                   ",
-                             "          r              ",
-                             "        ppp              ",
-                             "                         ",
-                             "           r             ",
-                             "          pppppp         ",
+                             "        pp               ",
                              "                         ",
                              "                         ",
-                             "                    r    ",
+                             "             pppp        ",
+                             "                      r  ",
+                             "                     ppp ",
                              "                         ",
-                             "    1           p   1    ",
-                             "            r  pp        ",
+                             "         r     pp    1   ",
+                             "  c                      ",
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
-    }
-    
-    public void nextLevel()
-    {
-        Greenfoot.setWorld(new Level02());
     }
 }

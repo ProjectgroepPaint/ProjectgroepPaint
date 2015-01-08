@@ -7,9 +7,10 @@ public class Player extends Actor
     private boolean jumping;
     private int jumpStrength = 16;
     private int speed = 4;
-    int world = 0;
+    private int level;
     private boolean hashkey = false;
     private int direction = 1; // 1 = right and -1 = left
+    
     
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
@@ -23,6 +24,7 @@ public class Player extends Actor
         checkRightWalls();
         checkLeftWalls();
         checkHit();
+        checkNextLevel();
     }   
     
     public void checkKey()
@@ -195,5 +197,10 @@ public class Player extends Actor
             gameOver gameover= new gameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
+    }
+    
+     private void checkNextLevel()
+    {
+        if (getX() == getWorld().getWidth()-1) ((Level)getWorld()).nextLevel();
     }
 }
