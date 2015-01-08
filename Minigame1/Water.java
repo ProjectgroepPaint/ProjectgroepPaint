@@ -8,13 +8,19 @@ public class Water extends World
     public Water()
     { 
         super(800,600, 1);
-       
         addObject (new Ship(), 300, 500);
         addObject (new Land(), 20, 300);
         addObject (new Land(), 780, 300);
         addObject (new Timer(), 400, 100);
         
-        
+        setPaintOrder(
+        GameOver.class,
+        finish.class,
+        Timer.class, 
+        Ship.class,
+        Buoy.class,
+        Rock.class
+        );
      }
 
     public void act() 
