@@ -21,10 +21,10 @@ public class Level01 extends Level
                              "           r             ",
                              "          pppppp         ",
                              "                         ",
-                             "                         ",
+                             "    1                    ",
                              "                    r    ",
                              "                         ",
-                             "    1           p   1    ",
+                             "    2    s      p   1    ",
                              "            r  pp        ",
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
     }
