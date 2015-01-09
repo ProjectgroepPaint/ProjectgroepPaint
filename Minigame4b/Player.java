@@ -12,10 +12,6 @@ public class Player extends Actor
     private int direction = 1; // 1 = right and -1 = left
     
     
-    /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         checkKey();
@@ -23,9 +19,30 @@ public class Player extends Actor
         platformAbove();
         checkRightWalls();
         checkLeftWalls();
-        checkHit();
-        checkNextLevel();
-    }   
+        checkplayerstatus();      
+    }
+   
+    public void checkplayerstatus()
+    {
+        if (getOneIntersectingObject (RadioactiveBarrel.class) != null)
+        {
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            gameOver gameover= new gameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
+        else if (getOneIntersectingObject (Hook.class) != null)
+        {
+            World myWorld = getWorld();
+            myWorld.removeObject(this);
+            gameOver gameover= new gameOver();
+            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
+        }
+        else if (getX() == getWorld().getWidth()-1)
+        {
+            ((Level)getWorld()).nextLevel();
+        }
+    }
     
     public void checkKey()
     {
@@ -181,26 +198,5 @@ public class Player extends Actor
         vSpeed = vSpeed - jumpStrength;
         jumping = true;
         fall();
-    }
-    
-    public void checkHit() 
-    {
-    if (getOneIntersectingObject (RadioactiveBarrel.class) != null){
-            World myWorld = getWorld();
-            myWorld.removeObject(this);
-            gameOver gameover= new gameOver();
-            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
-        }
-    else if (getOneIntersectingObject (Hook.class) != null){
-            World myWorld = getWorld();
-            myWorld.removeObject(this);
-            gameOver gameover= new gameOver();
-            myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
-        }
-    }
-    
-     private void checkNextLevel()
-    {
-        if (getX() == getWorld().getWidth()-1) ((Level)getWorld()).nextLevel();
     }
 }
