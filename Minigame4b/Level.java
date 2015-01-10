@@ -7,11 +7,10 @@ public abstract class Level extends World
     public Level()
     {
         super(800, 600, 1);
-        //setBackground(new GreenfootImage("StartScreen.png")); // Splash Screen
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "cbprh12s".indexOf(""+map[i].charAt(j));
+                int kind = "cbprh12sf".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Player();
@@ -22,6 +21,7 @@ public abstract class Level extends World
                 if (kind == 5) actor = new Container();
                 if (kind == 6) actor = new Container2();
                 if (kind == 7) actor = new ContainerFront();
+                if (kind == 8) actor = new Finish();
                 addObject(actor, 16+j*32, 16+i*32);
         }
         

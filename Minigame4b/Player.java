@@ -19,7 +19,7 @@ public class Player extends Actor
         platformAbove();
         checkRightWalls();
         checkLeftWalls();
-        checkplayerstatus();      
+        checkplayerstatus();
     }
    
     public void checkplayerstatus()
@@ -90,7 +90,6 @@ public class Player extends Actor
             return false;
         }
     }
-    
     
     public boolean checkRightWalls()
     {

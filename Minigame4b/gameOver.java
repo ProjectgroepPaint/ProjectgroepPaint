@@ -14,6 +14,13 @@ public class gameOver extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        restart();
+    }
+    
+    public void restart() {
+     if (Greenfoot.isKeyDown("r"))
+        {
+            Greenfoot.setWorld(new Level01());  
+        }   
+    }
 }

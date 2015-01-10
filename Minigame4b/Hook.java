@@ -13,10 +13,26 @@ public class Hook extends Actor
     public void act() 
     {
         move();
+        checkLevel();
     }    
     
     public void move() 
     {
           setLocation(getX()+speed, getY());
+    }
+    
+    public void checkLevel() {
+        if (Level02.class.isInstance(getWorld())) {
+            speed = 2; 
+        }
+        else if (Level03.class.isInstance(getWorld())) {
+            speed = 2; 
+        }
+        else if (Level04.class.isInstance(getWorld())) {
+            speed = 3; 
+        }
+        else if (Level05.class.isInstance(getWorld())) {
+            speed = 4; 
+        }
     }
 }
