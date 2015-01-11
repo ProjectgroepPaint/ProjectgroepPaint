@@ -1,15 +1,14 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 /**
- * abstract super class of all tetrominos; contains the act-method
+ * Write a description of class Tetromino here.
  * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (30.10.2008)
- * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public abstract class Tetromino extends Actor {
 
-	// possible directions of a tetromino
+	
 	protected static final int NORTH = 0;
 
 	protected static final int WEST = 1;
@@ -18,13 +17,13 @@ public abstract class Tetromino extends Actor {
 
 	protected static final int EAST = 3;
 
-	protected Block[] b; // each tetromino consists of four blocks
+	protected Block[] b; 
 
-	int direction; // direction of the tetromino
+	int direction; 
 
-	boolean dead; // is the tetromino dead?
+	boolean dead; 
 
-	private int counter; // internal counter
+	private int counter; 
 
 	Tetromino(String color) {
 		setImage("cell.png");

@@ -4,11 +4,10 @@ import java.awt.Font;
 import java.util.Calendar;
 
 /**
- * The ScoreBoard is used to display results on the screen. It can display some
- * text and several numbers.
+ * Write a description of class ScoreBoard here.
  * 
- * @author M Kolling (modified by Dietrich Boles)
- * @version 1.0
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class ScoreBoard extends Actor
 {

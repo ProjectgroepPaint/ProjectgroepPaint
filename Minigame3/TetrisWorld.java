@@ -1,12 +1,6 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
-/**
- * The world of tetris
- * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (15.02.2007)
- * 
- */
+
 public class TetrisWorld extends World {
 
 	private static TetrisWorld world = null;
@@ -53,22 +47,22 @@ public class TetrisWorld extends World {
 		currentTetromino = genTetromino();
 	}
 
-	// returns the current world
+	
 	static TetrisWorld getWorld() {
 		return world;
 	}
 
-	// returns the current tetromino or null if game terminated
+	
 	Tetromino getCurrentTetromino() {
 		return currentTetromino;
 	}
 
-	// changes the current tetromino
+	
 	void setCurrentTetromino(Tetromino t) {
 		currentTetromino = t;
 	}
 
-	// creates randomly a new tetromino
+	
 	Tetromino genTetromino() {
 	    this.numberOfTetrominos +=1;
 		
@@ -91,7 +85,7 @@ public class TetrisWorld extends World {
 		}
 	}
 
-	// adds new points to the point view
+	
 	void newPoints(int rows) {
 		int p = 0;
 		switch (rows) {
@@ -111,12 +105,12 @@ public class TetrisWorld extends World {
 		pointView.add(p);
 	}
 
-	// returns the current points of the player
+	
 	int getPoints() {
 		return pointView.getPoints();
 	}
 	
-	// game over
+	
 	void gameOver() {
 	    addObject(new ScoreBoard(getPoints()), getWidth() / 2, getHeight() / 2);
         Greenfoot.stop();

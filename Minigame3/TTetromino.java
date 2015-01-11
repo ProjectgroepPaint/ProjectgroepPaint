@@ -1,12 +1,6 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
-/**
- * represents a T tetromino
- * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (30.10.2008)
- * 
- */
+
 public class TTetromino extends Tetromino {
 	TTetromino() {
 		super("brown");

@@ -1,11 +1,10 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 /**
- * Represents a wall separating the tetris world from the point view
+ * Write a description of class Wall here.
  * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (30.10.2008)
- * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Wall extends Actor {
 

@@ -1,11 +1,10 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 /**
- * Represents a block of a tetromino
+ * Write a description of class Block here.
  * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (30.10.2008)
- * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Block extends Actor {
 	Block(String color) {

@@ -5,10 +5,10 @@ import java.awt.Graphics;
 import java.awt.Font;
 
 /**
- * Counter that displays a number with a text prefix.
+ * Write a description of class Counter here.
  * 
- * @author Michael Kolling (modified by Dietrich Boles)
- * @version 1.0.2
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Counter extends Actor
 {

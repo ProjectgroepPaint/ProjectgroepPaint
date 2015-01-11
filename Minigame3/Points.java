@@ -1,9 +1,8 @@
 /**
- * Represents the view of attained points
+ * Write a description of class Points here.
  * 
- * @author Dietrich Boles (University of Oldenburg, Germany)
- * @version 1.0 (30.10.2008)
- * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Points {
 
