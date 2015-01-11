@@ -18,9 +18,25 @@ public class gameOver extends Actor
     }
     
     public void restart() {
-     if (Greenfoot.isKeyDown("r"))
+    if (Greenfoot.isKeyDown("r") && (Level01.class.isInstance(getWorld())))
         {
             Greenfoot.setWorld(new Level01());  
-        }   
+        }  
+    else if (Greenfoot.isKeyDown("r") && (Level02.class.isInstance(getWorld())))
+        {
+            Greenfoot.setWorld(new Level02());  
+        }
+    else if (Greenfoot.isKeyDown("r") && (Level03.class.isInstance(getWorld())))
+        {
+            Greenfoot.setWorld(new Level03());  
+        }
+    else if (Greenfoot.isKeyDown("r") && (Level04.class.isInstance(getWorld())))
+        {
+            Greenfoot.setWorld(new Level04());  
+        }
+    else if (Greenfoot.isKeyDown("r") && (Level05.class.isInstance(getWorld())))
+        {
+            Greenfoot.setWorld(new Level05());  
+        }
     }
 }

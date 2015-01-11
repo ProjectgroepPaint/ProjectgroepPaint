@@ -22,14 +22,11 @@ public class Hook extends Actor
     }
     
     public void checkLevel() {
-        if (Level03.class.isInstance(getWorld())) {
-            speed = 2; 
-        }
-        else if (Level04.class.isInstance(getWorld())) {
+        if (Level04.class.isInstance(getWorld())) {
             speed = 2; 
         }
         else if (Level05.class.isInstance(getWorld())) {
-            speed = 3; 
+            speed = 2; 
         }
     }
 }

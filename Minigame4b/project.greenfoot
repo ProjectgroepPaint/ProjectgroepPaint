@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Jan 11 17:39:47 CET 2015
+#Sun Jan 11 18:04:28 CET 2015
 target16.name=Container
 class.Level01.superclass=Level
 target2.name=gameOver
@@ -245,11 +245,13 @@ dependency8.from=Level
 target12.editor.width=900
 target4.naviview.expanded=true
 target14.height=50
+class.Chain.superclass=greenfoot.Actor
 target18.naviview.expanded=true
 target9.y=370
 target4.editor.y=6
 target9.x=130
 target4.editor.x=588
+class.Chain.image=chain.png
 dependency29.to=Level04
 target11.name=Level02
 target5.y=190
