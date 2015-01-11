@@ -10,7 +10,7 @@ public abstract class Level extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "cbparh1234f".indexOf(""+map[i].charAt(j));
+                int kind = "cbparh1234fi".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Player();
@@ -24,6 +24,7 @@ public abstract class Level extends World
                 if (kind == 8) actor = new ContainerFront();
                 if (kind == 9) actor = new ContainerFront2();
                 if (kind == 10) actor = new Finish();
+                if (kind == 11) actor = new Instructions();
                 addObject(actor, 16+j*32, 16+i*32);
         }
         
