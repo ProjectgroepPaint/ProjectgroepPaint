@@ -16,16 +16,16 @@ public class Level02 extends Level
                              "                         ",
                              "                         ",
                              "                         ",
+                             "              r          ",
+                             "            pppp         ",
                              "                         ",
                              "                         ",
+                             "          p              ",
+                             "         pp              ",
+                             "        ppp              ",
                              "                         ",
-                             "                         ",
-                             "                         ",
-                             "                         ",
-                             "                         ",
-                             "                         ",
-                             "                         ",
-                             "  c                      ",
+                             "       2           4 p   ",
+                             "  c        rrrrrrr   pp  ",
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
     }
     
