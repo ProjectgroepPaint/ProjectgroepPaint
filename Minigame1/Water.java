@@ -8,7 +8,8 @@ public class Water extends World
     public Water()
     { 
         super(800,600, 1);
-        addObject (new Ship(), 300, 500);
+        addObject (new Ship(), 387 , 478);
+        addObject (new Ship2(), 387, 569);
         addObject (new Land(), 20, 300);
         addObject (new Land(), 780, 300);
         addObject (new Timer(), 400, 100);
