@@ -7,9 +7,9 @@ public class Buoy extends Obstacle
     {
         ObstacleMove(Obstaclespeed); 
     }
-    public static int Setspeed()
+    public static int IncreaseSpeed()
     {      
-        Obstaclespeed = Obstaclespeed+2;
+        Obstaclespeed = Obstaclespeed+1;
         return Obstaclespeed;
     }
 }

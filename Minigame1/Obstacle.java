@@ -2,8 +2,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Obstacle extends Actor
 {
+    private Game1 Scene;
     public int time = 5;  
     public int count = 60;
+    public static int Speed = 2;
+    public void addedToWorld(World world) 
+    {
+       Scene = (Game1) world; 
+    } 
     public void act()   
     {
        if(counter())  
@@ -11,10 +17,12 @@ public class Obstacle extends Actor
            time--;  
            count = 60;  
        } 
-       if (time == 0)
+       if (time == 0 && Speed != 12)
        {
-           Rock.Setspeed();
-           Buoy.Setspeed();
+           Rock.IncreaseSpeed();
+           Buoy.IncreaseSpeed();
+           IncreaseSpeed();
+           ((Game1) this.getWorld()).IncreaseBGSpeed();
            time = 5;
        } 
     }
@@ -33,5 +41,10 @@ public class Obstacle extends Actor
             count--;  
         }  
         return count == 0;  
+    }
+    public static int IncreaseSpeed()
+    {      
+        Speed = Speed+1;
+        return Speed;
     }
 }

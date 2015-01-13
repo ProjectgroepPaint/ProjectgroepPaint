@@ -5,6 +5,7 @@ public class Game1 extends World
     private GreenfootImage bgImage = new GreenfootImage("water-background.jpg");  
     private int scrollAmount;
     private int actCount = 0;
+    private int BackgroundSpeed = 2;
  
     public Game1()
     { 
@@ -17,10 +18,9 @@ public class Game1 extends World
         addObject (new Obstacle(), 0, 0);
         setPaintOrder(GameOver.class,finish.class,Timer.class,Ship.class,Land.class,Obstacle.class);
     }
-
     public void act() 
     {
-        scrollAmount = (scrollAmount+1)%bgImage.getHeight();  
+        scrollAmount = (scrollAmount+BackgroundSpeed)%bgImage.getHeight();  
         
         if (scrollAmount < getHeight())
         {
@@ -48,5 +48,9 @@ public class Game1 extends World
                     }
                     actCount = 150;
         }
+    }
+    public void IncreaseBGSpeed()
+    {
+        this.BackgroundSpeed = BackgroundSpeed + 1;
     }
 }

@@ -2,5 +2,5 @@
 comment0.params=
 comment0.target=void\ act()
 comment1.params=
-comment1.target=int\ Setspeed()
+comment1.target=int\ IncreaseSpeed()
 numComments=2
