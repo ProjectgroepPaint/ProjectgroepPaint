@@ -10,8 +10,9 @@ public class Game1 extends World
     public Game1()
     { 
         super(800,600, 1);
-        addObject (new Ship(), 387 , 478);
-        addObject (new Ship2(), 387, 569);
+        addObject (new Ship(), 387 , 444);
+        addObject (new Ship2(), 387, 576);
+        addObject (new Rope(), 383, 530);
         addObject (new Land(), 20, 300);
         addObject (new Land(), 780, 300);
         addObject (new Timer(), 400, 100);
