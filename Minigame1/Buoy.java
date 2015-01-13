@@ -1,12 +1,9 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Buoy extends Actor
+public class Buoy extends Obstacle
 {
-public void act() 
-{
-setLocation(getX(), getY() + 5); 
-if (getY()>595){  
-          getWorld().removeObject(this);  
-   };
-} 
+    public void act() 
+    {
+        ObstacleMove();
+    } 
 }
