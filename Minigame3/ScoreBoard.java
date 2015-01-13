@@ -11,7 +11,7 @@ import java.util.Calendar;
  */
 public class ScoreBoard extends Actor
 {
-    public static final float FONT_SIZE = 24.0f;
+    public static final float FONT_SIZE = 20f;
     public static final int WIDTH = 400; public static final int HEIGHT = 300;
     private int score;
 
@@ -27,7 +27,14 @@ public class ScoreBoard extends Actor
     }
     
     protected void addedToWorld(World world) {
-        makeImage("Game Over", "Score: ", score); 
+       if( score >= 200)
+       { 
+           makeImage("You Won","Score: ", score);
+        }
+       else
+       {
+           makeImage("Game Over"+"\n"+"Min. Score = 200", "Score: ", score); 
+        }
     }
     
 
@@ -51,17 +58,5 @@ public class ScoreBoard extends Actor
         image.drawString(title, WIDTH / 6, HEIGHT / 3);
         image.drawString(prefix + score, WIDTH / 6, 2 * HEIGHT / 3);
         setImage(image);
-    }
-    
-    public void won(){
-        
-       if( score >= 10)
-       { 
-           makeImage("You Won", "Score: ", score);
-        }
-       else
-       {
-          makeImage("Game Over", "Score: ", score); 
-        }
     }
 }
