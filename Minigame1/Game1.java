@@ -14,8 +14,8 @@ public class Game1 extends World
         addObject (new Land(), 20, 300);
         addObject (new Land(), 780, 300);
         addObject (new Timer(), 400, 100);
-        
-        setPaintOrder(GameOver.class,finish.class,Timer.class,Ship.class,Obstacle.class);
+        addObject (new Obstacle(), 0, 0);
+        setPaintOrder(GameOver.class,finish.class,Timer.class,Ship.class,Land.class,Obstacle.class);
     }
 
     public void act() 

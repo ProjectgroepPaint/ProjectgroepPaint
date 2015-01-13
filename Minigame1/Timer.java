@@ -4,7 +4,7 @@ import java.awt.Color;
 public class Timer extends Actor  
 {  
     private int time = 90;  
-    private int count = 65;  
+    private int count = 60;  
     public void act()   
     {
         if(time == 0)  
@@ -18,7 +18,7 @@ public class Timer extends Actor
         if(counter())  
         {  
             time--;  
-            count = 65;  
+            count = 60;  
         }  
         display();  
     }      
