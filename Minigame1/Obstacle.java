@@ -3,14 +3,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Obstacle extends Actor
 {
     private Game1 Scene;
-    public int time = 5;  
-    public int count = 60;
+    public static int time = 5;  
+    public static int count = 60;
     public static int Speed = 2;
     public void addedToWorld(World world) 
     {
        Scene = (Game1) world; 
     } 
-    public void act()   
+    public static void Reset()   
+    {
+       ResetSpeed();
+       ResetTimer();
+       ResetCount();
+       Rock.ResetSpeed();
+       Buoy.ResetSpeed();
+    }
+    public void act()
     {
        if(counter())  
        {  
@@ -46,5 +54,20 @@ public class Obstacle extends Actor
     {      
         Speed = Speed+1;
         return Speed;
+    }
+    public static int ResetSpeed()
+    {      
+        Speed = 2;
+        return Speed;
+    }
+    public static int ResetTimer()
+    {
+        time = 5;
+        return time;
+    }
+    public static int ResetCount()
+    {      
+        count = 60;
+        return count;
     }
 }

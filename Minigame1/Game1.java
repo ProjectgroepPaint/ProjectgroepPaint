@@ -30,7 +30,9 @@ public class Game1 extends World
         
         if (Greenfoot.isKeyDown("space"))
         {
-            Greenfoot.setWorld(new Game1());  
+            Obstacle.Reset();
+            ResetBGSpeed();
+            Greenfoot.setWorld(new Game1());
         }
         if (Greenfoot.isKeyDown("p"))
         {
@@ -52,5 +54,9 @@ public class Game1 extends World
     public void IncreaseBGSpeed()
     {
         this.BackgroundSpeed = BackgroundSpeed + 1;
+    }
+    public void ResetBGSpeed()
+    {      
+        this.BackgroundSpeed = 2;
     }
 }
