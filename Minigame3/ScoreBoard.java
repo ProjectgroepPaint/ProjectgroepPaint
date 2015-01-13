@@ -12,9 +12,12 @@ import java.util.Calendar;
 public class ScoreBoard extends Actor
 {
     public static final float FONT_SIZE = 24.0f;
-    
+    public static final int WIDTH = 400; public static final int HEIGHT = 300;
     private int score;
 
+    public ScoreBoard() {
+         this(100); 
+        }
     /**
      * Create a score board for the final result.
      */
