@@ -9,12 +9,12 @@ public class Level02 extends Level
     //      c = character    3 = container front 1          
     public void setFields()
     {
-        map = new String[] { "                         ",
-                             "h                        ",
+        map = new String[] { "    a                    ",
+                             "h   a                    ",
+                             "    a                    ",
+                             "    a                    ",
                              "                         ",
-                             "                         ",
-                             "                         ",
-                             "                         ",
+                             "    3                    ",
                              "                         ",
                              "                         ",
                              "              r          ",
