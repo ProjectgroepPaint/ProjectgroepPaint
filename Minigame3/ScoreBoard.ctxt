@@ -9,4 +9,6 @@ comment2.target=void\ addedToWorld(greenfoot.World)
 comment3.params=title\ prefix\ score
 comment3.target=void\ makeImage(java.lang.String,\ java.lang.String,\ int)
 comment3.text=\n\ Make\ the\ score\ board\ image.\n
-numComments=4
+comment4.params=
+comment4.target=void\ won()
+numComments=5

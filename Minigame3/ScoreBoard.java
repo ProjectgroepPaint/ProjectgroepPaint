@@ -27,8 +27,9 @@ public class ScoreBoard extends Actor
     }
     
     protected void addedToWorld(World world) {
-        makeImage("Game Over", "Score: ", score);
+        makeImage("Game Over", "Score: ", score); 
     }
+    
 
     /**
      * Make the score board image.
@@ -50,5 +51,17 @@ public class ScoreBoard extends Actor
         image.drawString(title, WIDTH / 6, HEIGHT / 3);
         image.drawString(prefix + score, WIDTH / 6, 2 * HEIGHT / 3);
         setImage(image);
+    }
+    
+    public void won(){
+        
+       if( score >= 10)
+       { 
+           makeImage("You Won", "Score: ", score);
+        }
+       else
+       {
+          makeImage("Game Over", "Score: ", score); 
+        }
     }
 }
