@@ -10,14 +10,17 @@ public class Game1 extends World
     public Game1()
     { 
         super(800,600, 1);
-        addObject (new Ship(), 387 , 444);
+        addObject (new Ship(), 387 , 475);
         addObject (new Ship2(), 387, 576);
-        addObject (new Rope(), 383, 530);
         addObject (new Land(), 20, 300);
         addObject (new Land(), 780, 300);
         addObject (new Timer(), 400, 100);
         addObject (new Obstacle(), 0, 0);
-        setPaintOrder(GameOver.class,finish.class,Timer.class,Ship.class,Land.class,Obstacle.class);
+        Actor ship = (Actor)this.getObjects(Ship.class).get(0);
+        Actor ship2 = (Actor)this.getObjects(Ship2.class).get(0);
+        Rope rope = new Rope(ship, ship2);
+        this.addObject(rope, 1, 1);
+        setPaintOrder(GameOver.class,finish.class,Timer.class,Ship.class,Rope.class,Land.class,Obstacle.class);
     }
     public void act() 
     {
