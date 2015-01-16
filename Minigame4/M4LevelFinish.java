@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 
-public class LevelFinish extends Level
+public class M4LevelFinish extends M4Level
 {
     /** ********************      MAP LEGEND     *********************** */
     //      b = block        r = radioactive barrel     f = finish

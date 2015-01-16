@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 
-public class Level05 extends Level
+public class M4Level02 extends M4Level
 {
     /** ********************      MAP LEGEND     *********************** */
     //      b = block        r = radioactive barrel     4 = container front 2     
@@ -9,29 +9,29 @@ public class Level05 extends Level
     //      c = character    3 = container front 1          
     public void setFields()
     {
-        map = new String[] { "   a     a     a     a   ",
-                             "h  a     a     a     a   ",
-                             "   a     a     a     a   ",
-                             "   a     a     a     a   ",
-                             "         a     a     a   ",
-                             "   4     a     a     a   ",
-                             "         a     a     a   ",
-                             "         a     a     a   ",
-                             "                     a   ",
-                             "            1        a   ",
+        map = new String[] { "    a                    ",
+                             "h   a                    ",
+                             "    a                    ",
+                             "    a                    ",
                              "                         ",
-                             "                     3   ",
+                             "    3                    ",
                              "                         ",
                              "                         ",
+                             "              r          ",
+                             "            pppp         ",
                              "                         ",
                              "                         ",
+                             "          p              ",
+                             "         pp              ",
+                             "        ppp              ",
                              "                         ",
-                             "  c  r   r   r   r   r   ",
+                             "       2           4 p   ",
+                             "  c        rrrrrrr   pp  ",
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
     }
     
     public void nextLevel()
     {
-        Greenfoot.setWorld(new LevelFinish());
+        Greenfoot.setWorld(new M4Level03());
     }
 }

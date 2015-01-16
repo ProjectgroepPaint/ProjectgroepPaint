@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class Player extends Actor
+public class M4Player extends Actor
 {
     private int vSpeed = 0;
     private int acceleration = 1;
@@ -24,23 +24,23 @@ public class Player extends Actor
    
     public void checkplayerstatus()
     {
-        if (getOneIntersectingObject (RadioactiveBarrel.class) != null)
+        if (getOneIntersectingObject (M4RadioactiveBarrel.class) != null)
         {
             World myWorld = getWorld();
             myWorld.removeObject(this);
-            gameOver gameover= new gameOver();
+            M4gameOver gameover= new M4gameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
-        else if (getOneIntersectingObject (Hook.class) != null)
+        else if (getOneIntersectingObject (M4Hook.class) != null)
         {
             World myWorld = getWorld();
             myWorld.removeObject(this);
-            gameOver gameover= new gameOver();
+            M4gameOver gameover= new M4gameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
         else if (getX() == getWorld().getWidth()-1)
         {
-            ((Level)getWorld()).nextLevel();
+            ((M4Level)getWorld()).nextLevel();
         }
     }
     
@@ -78,7 +78,7 @@ public class Player extends Actor
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/-2);
-        Actor ceiling = getOneObjectAtOffset(0, yDistance, Platform.class);
+        Actor ceiling = getOneObjectAtOffset(0, yDistance, M4Platform.class);
         if(ceiling != null)
         {
             vSpeed = 1;
@@ -95,7 +95,7 @@ public class Player extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/2);
-        Actor rightWall = getOneObjectAtOffset(xDistance, 0, Platform.class);
+        Actor rightWall = getOneObjectAtOffset(xDistance, 0, M4Platform.class);
         if(rightWall == null)
         {
             return false;
@@ -119,7 +119,7 @@ public class Player extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/-2);
-        Actor leftWall = getOneObjectAtOffset(xDistance, 0, Platform.class);
+        Actor leftWall = getOneObjectAtOffset(xDistance, 0, M4Platform.class);
         if(leftWall == null)
         {
             return false;
@@ -159,7 +159,7 @@ public class Player extends Actor
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/2) + 5;
-        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, Platform.class);
+        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, M4Platform.class);
         if(ground == null)
         {
             jumping = true;

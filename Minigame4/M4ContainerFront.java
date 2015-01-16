@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Block here.
+ * Write a description of class ContainerFront1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Block extends Platform
+public class M4ContainerFront extends M4Platform
 {
     /**
-     * Act - do whatever the Block wants to do. This method is called whenever
+     * Act - do whatever the ContainerFront1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

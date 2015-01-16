@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 
-public class Level01 extends Level
+public class M4Level01 extends M4Level
 {
     /** ********************      MAP LEGEND     *********************** */
     //      b = block        r = radioactive barrel     4 = container front 2     
@@ -32,6 +32,6 @@ public class Level01 extends Level
     
     public void nextLevel()
     {
-        Greenfoot.setWorld(new Level02());
+        Greenfoot.setWorld(new M4Level02());
     }
 }

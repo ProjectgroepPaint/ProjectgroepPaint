@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hook extends Actor
+public class M4Hook extends Actor
 {
    private int speed = 1;
    
@@ -22,10 +22,10 @@ public class Hook extends Actor
     }
     
     public void checkLevel() {
-        if (Level04.class.isInstance(getWorld())) {
+        if (M4Level04.class.isInstance(getWorld())) {
             speed = 2; 
         }
-        else if (Level05.class.isInstance(getWorld())) {
+        else if (M4Level05.class.isInstance(getWorld())) {
             speed = 2; 
         }
     }
