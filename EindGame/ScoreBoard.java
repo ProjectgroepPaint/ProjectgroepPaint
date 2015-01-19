@@ -3,21 +3,16 @@ import java.awt.Color;
 import java.awt.Font;
 import java.util.Calendar;
 
-/**
- * Write a description of class ScoreBoard here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class ScoreBoard extends Actor
 {
     public static final float FONT_SIZE = 20f;
     public static final int WIDTH = 400; public static final int HEIGHT = 300;
     private int score;
 
-    public ScoreBoard() {
+    public ScoreBoard()
+    {
          this(100); 
-        }
+    }
     /**
      * Create a score board for the final result.
      */
@@ -25,8 +20,9 @@ public class ScoreBoard extends Actor
     {
         this.score = score;
     }
-    
-    protected void addedToWorld(World world) {
+    protected void addedToWorld(World world)
+    {
+       // adds a "You Won/Game Over" image based on your score.
        if( score >= 200)
        { 
            makeImage("You Won","Score: ", score);
@@ -36,8 +32,6 @@ public class ScoreBoard extends Actor
            makeImage("Game Over"+"\n"+"Min. Score = 200", "Score: ", score); 
         }
     }
-    
-
     /**
      * Make the score board image.
      */

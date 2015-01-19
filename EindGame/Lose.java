@@ -4,6 +4,6 @@ public class Lose extends Actor
 {
     public void act() 
     {
-        // Add your action code here.
+        // Gameover Image.
     }    
 }

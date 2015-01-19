@@ -6,7 +6,8 @@ public class button6 extends Actor
     {
         if (Greenfoot.mouseClicked(this))  
         {  
-            Greenfoot.setWorld(new Multiplayer());  
+            Greenfoot.setWorld(new Multiplayer());
+            // Sets world to the Multiplayer version of game2.
         }
     }    
 }

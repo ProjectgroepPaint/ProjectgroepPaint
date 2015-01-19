@@ -6,6 +6,7 @@ public abstract class M4Level extends World
 
     public M4Level()
     {
+        // Create a new world with 800x600 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
@@ -28,8 +29,11 @@ public abstract class M4Level extends World
                 addObject(actor, 16+j*32, 16+i*32);
         }
         
+        // Sets which class shows on top.
         setPaintOrder(button5.class,M4gameOver.class,M4Hook.class,M4Player.class,
         M4RadioactiveBarrel.class,M4Platform2.class, M4Container.class, M4Block.class);
+        
+        // Adding button to return to the menu the world.
         addObject(new button5(), 32, 31);
     }
     

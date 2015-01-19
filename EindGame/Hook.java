@@ -13,6 +13,7 @@ public class Hook extends Rope
     {
         Hookmove();        
         
+        // Checks if the hook is touching a container, spawns a hook with a container and removes the container and hook from the world.
         if (Greenfoot.isKeyDown("space") && getOneIntersectingObject (Container.class) != null)
         {
             Scene.addObject(new Hookwithcontainer(), getX(), getY());

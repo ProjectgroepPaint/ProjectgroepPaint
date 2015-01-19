@@ -5,7 +5,7 @@ public class M1Rope extends Actor
 {
     Actor actorOne;
     Actor actorTwo;
-     
+    // Sets actors which are to be connected to the rope. 
     public M1Rope(Actor Ship, Actor Ship2)
     {
         actorOne = Ship;
@@ -16,7 +16,7 @@ public class M1Rope extends Actor
     {
         updateImage();
     }
-     
+    // Sets length and location of rope. 
     private void updateImage()
     {
         Actor ship = (Actor)getWorld().getObjects(M1Ship.class).get(0);

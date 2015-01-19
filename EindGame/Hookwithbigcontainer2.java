@@ -11,10 +11,11 @@ public class Hookwithbigcontainer2 extends Hook2
     public void act() 
     {
        Hookmove();
-        if (getY()<563 && Greenfoot.isKeyDown("Q") && getOneIntersectingObject (ContaineronShip.class) == null)
-        {getWorld().addObject(new Container2(), getX(), getY());
-         Scene.addObject(new Hook2(), getX(), getY());
-         Scene.removeObject(this);
-        }
+       // Checks if its possible to spawn a container.
+       if (getY()<563 && Greenfoot.isKeyDown("Q") && getOneIntersectingObject (ContaineronShip.class) == null)
+       {getWorld().addObject(new Container2(), getX(), getY());
+        Scene.addObject(new Hook2(), getX(), getY());
+        Scene.removeObject(this);
+       }
     }    
 }

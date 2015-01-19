@@ -4,8 +4,10 @@ public class AIRope extends AICrane
 {
     public int minimum_offsetRope = 946;
     public int maximum_offsetRope = 1263;
+    // X-Coordinates of the left and right bound for AICraneRope.
     public int minimum_offsetHook = 933;
     public int maximum_offsetHook = 1250;
+    // X-Coordinates of the left and right bound for AICraneHook.
     public static int VERTICAL_MOVEMENT;
     public void act()
     {

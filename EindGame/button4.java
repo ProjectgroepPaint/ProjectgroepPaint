@@ -6,7 +6,8 @@ public class button4 extends Actor
     {
         if (Greenfoot.mouseClicked(this))  
         {  
-            Greenfoot.setWorld(new M4Level01());  
+            Greenfoot.setWorld(new M4Level01());
+            // Sets world to game4.
         }
     }    
 }

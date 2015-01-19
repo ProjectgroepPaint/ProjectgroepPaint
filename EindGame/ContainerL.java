@@ -3,6 +3,7 @@ public class ContainerL extends Container
 {
     public void act() 
     {
+        // Method call which makes the container move left.
         MoveL();
     }
 }

@@ -7,7 +7,8 @@ public class button3 extends Actor
     {
         if (Greenfoot.mouseClicked(this))  
         {  
-            Greenfoot.setWorld(new Game3());  
+            Greenfoot.setWorld(new Game3());
+            // Sets world to game3.
         }
     }    
 }

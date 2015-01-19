@@ -4,6 +4,6 @@ public class M1finish extends Actor
 {
     public void act() 
     {
-        // Add your action code here.
+        // "You won" image
     }    
 }

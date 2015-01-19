@@ -4,6 +4,6 @@ public class ContaineronShip extends Actor
 {
     public void act() 
     {
-        // Add your action code here.
+        // Class which contains all 4 "ContaineronShip" classes.
     }    
 }

@@ -7,7 +7,9 @@ public class button7 extends Actor
         if (Greenfoot.mouseClicked(this))  
         {  
             Greenfoot.setSpeed(50);
-            Greenfoot.setWorld(new Menu());  
+            // Returns the gamespeed to normal.
+            Greenfoot.setWorld(new Menu());
+            // Sets world back to the menu.
         }
     }    
 }

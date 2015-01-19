@@ -4,12 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Font;
 
-/**
- * Write a description of class Counter here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Counter extends Actor
 {
     private static final Color textColor = new Color(0, 0, 0);
@@ -29,7 +23,7 @@ public class Counter extends Actor
     
     protected void addedToWorld(World world) {
         GreenfootImage image = 
-          new GreenfootImage(world.getWidth() * world.getCellSize(), world.getCellSize()*2);
+        new GreenfootImage(world.getWidth() * world.getCellSize(), world.getCellSize()*2);
         setImage(image);
         image.setColor(textColor);
         Font font = image.getFont();

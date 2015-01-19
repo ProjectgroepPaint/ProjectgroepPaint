@@ -4,8 +4,9 @@ public class Menu extends World
 {
     public Menu()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1000x800 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1);
+        // Adding buttons to the world.
         addObject(new button1(), 250, 200);
         addObject(new button2(), 750, 200);
         addObject(new button3(), 250, 600);

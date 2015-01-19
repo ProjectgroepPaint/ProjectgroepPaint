@@ -12,12 +12,12 @@ public class Hook2 extends Rope2
     {
         Hookmove();        
         
+        // Checks if the hook is touching a container, spawns a hook with a container and removes the container and hook from the world.
         if (Greenfoot.isKeyDown("Q") && getOneIntersectingObject (Container.class) != null)
         {
             Scene.addObject(new Hookwithcontainer2(), getX(), getY());
             getWorld().removeObjects(getIntersectingObjects(Container.class));
             Scene.removeObject(this);
-            
         }
         else if (Greenfoot.isKeyDown("Q") && getOneIntersectingObject (ContainerBig.class) != null)
         {

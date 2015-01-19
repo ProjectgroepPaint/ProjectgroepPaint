@@ -11,6 +11,7 @@ public class M1Ship extends Actor
        ShipMove(speed);
        Collision();
    }
+   // Moves ship if buttons are pressed.
    public void ShipMove(int speed)
    {
        if (Greenfoot.isKeyDown("left"))
@@ -22,6 +23,7 @@ public class M1Ship extends Actor
            move (speed); 
        } 
    }
+   // Checks if the ships are colliding with an obstacle.
    public void Collision()
    {
        Actor Rock=getOneIntersectingObject(M1Obstacle.class);

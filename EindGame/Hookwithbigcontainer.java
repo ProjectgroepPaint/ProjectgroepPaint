@@ -11,7 +11,7 @@ public class Hookwithbigcontainer extends Hook
     public void act() 
     {
         Hookmove();
-        
+        // Checks if its possible to spawn a container.
         if (getY()<563 && Greenfoot.isKeyDown("space") && getOneIntersectingObject (ContaineronShip.class) == null)
         {getWorld().addObject(new Container2(), getX(), getY());
          Scene.addObject(new Hook(), getX(), getY());

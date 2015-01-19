@@ -7,6 +7,7 @@ public class AIHook extends AIRope
     {Scene = (Game2) world;}
     public void setVERTICAL_MOVEMENT()
     {
+        // Moves hook down.
         if (getY()<875)
         {VERTICAL_MOVEMENT = 4;}
         else {VERTICAL_MOVEMENT = 0;}
@@ -22,19 +23,18 @@ public class AIHook extends AIRope
         Hookmove();
         setmoveRight();
         
+        // Picks up container if possible.
         if (getOneIntersectingObject (Container.class) != null)
         {
             Scene.addObject(new AIHookwithcontainer(), getX(), getY());
             getWorld().removeObjects(getIntersectingObjects(Container.class));
             Scene.removeObject(this);
-            
         }
         else if (getOneIntersectingObject (ContainerBig.class) != null)
         {
             Scene.addObject(new AIHookwithbigcontainer(), getX(), getY());
             getWorld().removeObjects(getIntersectingObjects(ContainerBig.class));
             Scene.removeObject(this);
-            
         }
         else if (getOneIntersectingObject (MysteryContainer.class) != null)
         {

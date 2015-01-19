@@ -4,6 +4,6 @@ public class Sky extends Actor
 {
     public void act() 
     {
-        // Add your action code here.
+        // sky overlays the background to hide the rope. 
     }    
 }

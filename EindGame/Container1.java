@@ -10,11 +10,13 @@ public class Container1 extends FallingContainers
     }    
     public void act() 
     {
+        // Calls method which makes the container move (fall).
         Fallingcontainer();        
         if (getY()>563 || getOneIntersectingObject (ContaineronShip.class) != null)
         {  
             Scene.addObject(new ContaineronShip1(), getX(), getY());
             
+            // Adds points to score.
             if (getX()<700)
             {
                 ((Game2) this.getWorld()).addScore(20);
