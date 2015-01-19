@@ -3,16 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class M4gameOver extends Actor
 {
     // Gameover image.
-    
-    
-    
+
     public void act() 
     {
         restart();
     }
     
-    // Restarts level if "r" is pressed.
-    public void restart() {
+    // Checks the curent level and resets it when the 'r' key is pressed
+    private void restart() {
         if (Greenfoot.isKeyDown("r") && (M4Level01.class.isInstance(getWorld())))
             {
                 Greenfoot.setWorld(new M4Level01());  

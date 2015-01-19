@@ -10,8 +10,7 @@ public class M4Player extends Actor
     private int level;
     private boolean hashkey = false;
     private int direction = 1; // 1 = right and -1 = left
-    
-    
+        
     public void act() 
     {
         checkKey();
@@ -19,11 +18,12 @@ public class M4Player extends Actor
         platformAbove();
         checkRightWalls();
         checkLeftWalls();
-        checkplayerstatus();
+        checkPlayerStatus();
     }
    
-    public void checkplayerstatus()
+    public void checkPlayerStatus()
     {
+        // Checks if the player hits a dangerous obstacle
         if (getOneIntersectingObject (M4RadioactiveBarrel.class) != null)
         {
             World myWorld = getWorld();
@@ -38,13 +38,15 @@ public class M4Player extends Actor
             M4gameOver gameover= new M4gameOver();
             myWorld.addObject (gameover,myWorld.getWidth()/2, myWorld.getHeight()/2);
         }
+        // Checks if player has reached the end of the level
         else if (getX() == getWorld().getWidth()-1)
         {
             ((M4Level)getWorld()).nextLevel();
         }
     }
     
-    public void checkKey()
+    // Checks the keys the user is pressing to return the action
+    private void checkKey()
     {
         if(Greenfoot.isKeyDown("right"))
         {
@@ -64,17 +66,19 @@ public class M4Player extends Actor
         }
     }
     
-    public void moveRight()
+    // Player movement left & right
+    private void moveRight()
     {
         setLocation(getX()+speed, getY());
     }
     
-        public void moveLeft()
+    private void moveLeft()
     {
         setLocation(getX()-speed, getY());
     }
     
-        public boolean platformAbove()
+    // Checks for obstacles above the player
+    private boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/-2);
@@ -91,7 +95,8 @@ public class M4Player extends Actor
         }
     }
     
-    public boolean checkRightWalls()
+    // Checks obstacles on the right of player
+    private boolean checkRightWalls()
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/2);
@@ -107,7 +112,8 @@ public class M4Player extends Actor
         }
     }
 
-    public void stopByRightWall(Actor rightWall)
+    // Stops player from running through obstacles
+    private void stopByRightWall(Actor rightWall)
     {
         int wallWidth = rightWall.getImage().getWidth();
         int newX = rightWall.getX() - (wallWidth + getImage().getWidth())/2;
@@ -115,7 +121,8 @@ public class M4Player extends Actor
 
     }
 
-    public boolean checkLeftWalls()
+    // Checks obstacles on the left of player
+    private boolean checkLeftWalls()
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/-2);
@@ -131,39 +138,32 @@ public class M4Player extends Actor
         }
     }
 
-    public void stopByLeftWall(Actor leftWall)
+    // Stops player from running through obstacles
+    private void stopByLeftWall(Actor leftWall)
     {
         int wallWidth = leftWall.getImage().getWidth();
         int newX = leftWall.getX() + (wallWidth + getImage().getWidth())/2;
         setLocation(newX + 5, getY());
     }
-
-    public void bopHead(Actor ceiling)
+    
+    // Bounces player off ceiling to stop them from jumping through
+    private void bopHead(Actor ceiling)
     {
         int ceilingHeight = ceiling.getImage().getHeight();
         int newY = ceiling.getY() + (ceilingHeight + getImage().getHeight())/2;
         setLocation(getX(), newY);
     }
 
-    public void fall()
-    {
-        setLocation(getX(), getY() + vSpeed);
-        if(vSpeed <=9)
-        {
-            vSpeed = vSpeed + acceleration;
-        }
-        jumping = true;
-    }
-
-    public boolean onGround()
+    // Checks if player is on a platform
+    private boolean onGround()
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/2) + 5;
         Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, M4Platform.class);
         if(ground == null)
         {
-            jumping = true;
-            return false;
+            jumping = true; 
+            return false; 
         }
         else
         {
@@ -172,7 +172,7 @@ public class M4Player extends Actor
         }
     }
 
-    public void moveToGround(Actor ground)
+    private void moveToGround(Actor ground)
     {
         int groundHeight = ground.getImage().getHeight();
         int newY = ground.getY() - (groundHeight + getImage().getHeight())/2;
@@ -180,7 +180,8 @@ public class M4Player extends Actor
         jumping = false;
     }
 
-    public void checkFall()
+    // Checks if the player should be falling
+    private void checkFall()
     {
         if(onGround())
         {
@@ -192,7 +193,18 @@ public class M4Player extends Actor
         }
     }
 
-    public void jump()
+    // Allows player to fall off platforms
+    private void fall()
+    {
+        setLocation(getX(), getY() + vSpeed);
+        if(vSpeed <=9)
+        {
+            vSpeed = vSpeed + acceleration;
+        }
+        jumping = true;
+    }
+    
+    private void jump()
     {
         vSpeed = vSpeed - jumpStrength;
         jumping = true;

@@ -30,8 +30,7 @@ public abstract class M4Level extends World
         }
         
         // Sets which class shows on top.
-        setPaintOrder(button5.class,M4gameOver.class,M4Hook.class,M4Player.class,
-        M4RadioactiveBarrel.class,M4Platform2.class, M4Container.class, M4Block.class);
+        setPaintOrder(button5.class,M4gameOver.class,M4Hook.class,M4Player.class,M4RadioactiveBarrel.class,M4Platform2.class, M4Container.class, M4Block.class);
         
         // Adding button to return to the menu the world.
         addObject(new button5(), 32, 31);
@@ -40,5 +39,4 @@ public abstract class M4Level extends World
     public void setFields() {}
 
     public void nextLevel() {}
-   
 }

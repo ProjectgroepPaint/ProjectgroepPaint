@@ -9,11 +9,15 @@ public class M4Hook extends Actor
         move();
         checkLevel();
    }    
-   public void move() 
+   
+   // Automatically moves the hook to the right
+   private void move() 
    {
           setLocation(getX()+speed, getY());
    }
-   public void checkLevel() {
+   
+   // Sets the speed of the hook to a higher number when the current level is 4 or 5
+   private void checkLevel() {
         if (M4Level04.class.isInstance(getWorld()))
         {
             speed = 2; 
