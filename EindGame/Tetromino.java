@@ -2,15 +2,15 @@ import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 public abstract class Tetromino extends Actor 
 {
-	protected static final int NORTH = 0;
+	// possible directions of a tetromino
+    protected static final int NORTH = 0;
 	protected static final int WEST = 1;
 	protected static final int SOUTH = 2;
 	protected static final int EAST = 3;
-	protected Block[] b; 
-
-	int direction; 
-	boolean dead; 
-	private int counter; 
+	protected Block[] b; // each tetromino consists of four blocks
+	int direction; // direction of the tetromino
+	boolean dead; // tetromino dead?
+	private int counter; // internal counter
 
 	Tetromino(String color) {
 		setImage("cell.png");
@@ -24,14 +24,13 @@ public abstract class Tetromino extends Actor
 		Game3.getWorld().getHeight() - 1);
 	}
 
-	// changes the direction of a tetromino; the current direction is stored in
-	// attribute direction
+	// changes the direction of a tetromino; 
 	abstract protected void setDirection();
 
-	// left most block of the tetromino (depending on its direction)
+	// left most block of the tetromino 
 	abstract protected Block leftMost();
 
-	// right most block of the tetromino (depending on its direction)
+	// right most block of the tetromino 
 	abstract protected Block rightMost();
 
 	// is left turn possible?
@@ -45,7 +44,7 @@ public abstract class Tetromino extends Actor
 		dead = true;
 	}
 
-	// the current tetromino (more precisely its blocks) are falling down
+	// the current tetromino are falling down
 	public void act() {
 		Game3 world = Game3.getWorld();
 		if (world.getCurrentTetromino() == null) { // game ended
