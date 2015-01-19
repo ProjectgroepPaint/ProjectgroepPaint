@@ -28,7 +28,7 @@ public class Game3 extends World
 
 		world = this;
 
-		setBackground("cell.png");
+		setBackground("cell.png"); //Sets the background
 
 		for (int i = 0; i < cols; i++) {
 			addObject(new Wall(), i, rows);
@@ -42,22 +42,22 @@ public class Game3 extends World
 		currentTetromino = genTetromino();
 	}
 
-	
+	// returns the current world
 	static Game3 getWorld() {
 		return world;
 	}
 
-	
+	// returns the current tetromino or null if game terminated
 	Tetromino getCurrentTetromino() {
 		return currentTetromino;
 	}
 
-	
+	// changes the current tetromino
 	void setCurrentTetromino(Tetromino t) {
 		currentTetromino = t;
 	}
 
-	
+	// creates random a new tetromino
 	Tetromino genTetromino() {
 	    this.numberOfTetrominos +=1;
 		
@@ -80,7 +80,7 @@ public class Game3 extends World
 		}
 	}
 
-	
+	// adds new points to the point view
 	void newPoints(int rows) {
 		int p = 0;
 		switch (rows) {
@@ -100,7 +100,7 @@ public class Game3 extends World
 		pointView.add(p);
 	}
 
-	// Shows the points
+	// returns the current points of the player
 	int getPoints() {
 		return pointView.getPoints();
 	}
