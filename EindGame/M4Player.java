@@ -21,7 +21,7 @@ public class M4Player extends Actor
         checkPlayerStatus();
     }
    
-    public void checkPlayerStatus()
+    private void checkPlayerStatus()
     {
         // Checks if the player hits a dangerous obstacle
         if (getOneIntersectingObject (M4RadioactiveBarrel.class) != null)

@@ -9,12 +9,12 @@ public class M1Obstacle extends Actor
     public static int count = 60;
     public static int Speed = 2;
     
-    public void addedToWorld(World world) 
+    protected void addedToWorld(World world) 
     {
        Scene = (Game1) world; 
     } 
     // Resets timer and MovementSpeed of the obstacles.
-    public static void Reset()   
+    protected static void Reset()   
     {
        ResetSpeed();
        ResetTimer();
@@ -40,7 +40,7 @@ public class M1Obstacle extends Actor
        } 
     }
     // Makes the obstacles move down the screen.
-    public void ObstacleMove(int Obstaclespeed)
+    protected void ObstacleMove(int Obstaclespeed)
     {
         setLocation(getX(), getY() + Obstaclespeed); 
         if (getY()>595)
@@ -48,7 +48,7 @@ public class M1Obstacle extends Actor
             getWorld().removeObject(this);  
         }
     }      
-    public boolean counter()  
+    private boolean counter()  
     {  
         if(count > 0)  
         {  
@@ -57,25 +57,25 @@ public class M1Obstacle extends Actor
         return count == 0;  
     }
     // Increases speed.
-    public static int IncreaseSpeed()
+    private static int IncreaseSpeed()
     {      
         Speed = Speed+1;
         return Speed;
     }
     // Sets speed back to 2.
-    public static int ResetSpeed()
+    protected static int ResetSpeed()
     {      
         Speed = 2;
         return Speed;
     }
     // Sets timer back to 5.
-    public static int ResetTimer()
+    protected static int ResetTimer()
     {
         time = 5;
         return time;
     }
     // Sets the count back to 60.
-    public static int ResetCount()
+    protected static int ResetCount()
     {      
         count = 60;
         return count;

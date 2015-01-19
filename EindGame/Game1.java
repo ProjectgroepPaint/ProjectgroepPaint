@@ -77,13 +77,13 @@ public class Game1 extends World
     }
     
     // Method which increases the BackgroundSpeed.
-    public void IncreaseBGSpeed()
+    protected void IncreaseBGSpeed()
     {
         this.BackgroundSpeed = BackgroundSpeed + 1;
     }
     
     // Method which sets the BackgroundSpeed back to 2.
-    public static void ResetBGSpeed()
+    protected static void ResetBGSpeed()
     {      
         BackgroundSpeed = 2;
     }

@@ -36,7 +36,7 @@ public abstract class M4Level extends World
         addObject(new button5(), 32, 31);
     }
     
-    public void setFields() {}
+    protected void setFields() {}
 
-    public void nextLevel() {}
+    protected void nextLevel() {}
 }

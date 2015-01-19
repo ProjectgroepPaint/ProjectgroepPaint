@@ -7,7 +7,7 @@ public class M4Level05 extends M4Level
     //      p = platform     1 = container variety 1    f = finish
     //      h = hook         2 = container variety 1    a = chain
     //      c = character    3 = container front 1          
-    public void setFields()
+    protected void setFields()
     {
         map = new String[] { "   a     a     a     a   ",
                              "h  a     a     a     a   ",
@@ -30,7 +30,7 @@ public class M4Level05 extends M4Level
                              "bbbbbbbbbbbbbbbbbbbbbbbbb" };
     }
     
-    public void nextLevel()
+    protected void nextLevel()
     {
         Greenfoot.setWorld(new M4LevelFinish());
     }

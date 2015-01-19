@@ -9,7 +9,7 @@ public class M1Ship2 extends M1Ship
      Collision();
      Shipmove2();
    }
-   public void Shipmove2()
+   private void Shipmove2()
    {
      // Moves Ship2 (the big ship) to the left or right if Ship1 isn't right in front of it.
      if(!getWorld().getObjects(M1Ship.class).isEmpty())
