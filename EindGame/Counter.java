@@ -11,7 +11,8 @@ public class Counter extends Actor
     private int value = 0;
     private String text;
 
-    public Counter()
+    // Creat a Counter
+   public Counter()
     {
         this("");
     }
@@ -20,7 +21,7 @@ public class Counter extends Actor
     {
         text = prefix;
     }
-    
+    // make the image
     protected void addedToWorld(World world) {
         GreenfootImage image = 
         new GreenfootImage(world.getWidth() * world.getCellSize(), world.getCellSize()*2);

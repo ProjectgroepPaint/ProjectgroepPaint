@@ -1,6 +1,6 @@
 public class Points
 {
-
+    
 	private int points;
 	Counter counter;
 
@@ -14,7 +14,7 @@ public class Points
 	{
 		counter.add(points);
 	}
-	int getPoints()
+	int getPoints() 
 	{
 	    return counter.getValue();
 	}

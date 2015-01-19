@@ -1,23 +1,17 @@
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class Game3 extends World {
-
+public class Game3 extends World 
+{
 	private static Game3 world = null;
-
 	private Points pointView;
-
 	private Tetromino currentTetromino;
-	
 	private int numberOfTetrominos;
-	
 	private int speed;
-
-	/**
-	 * Creates a tetris world with 10 columns and 22 rows
-	 */
+	
 	public Game3() {
-		this(10, 24);
+		//Creates a tetris world with 10 columns and 24 rows
+	    this(10, 24);
 		addObject(new button7(), 9, 25);
 	}
 
@@ -106,12 +100,12 @@ public class Game3 extends World {
 		pointView.add(p);
 	}
 
-	
+	// Shows the points
 	int getPoints() {
 		return pointView.getPoints();
 	}
 	
-	
+	// Sets game over
 	void gameOver() {
 	    addObject(new ScoreBoard(getPoints()), getWidth() / 2, getHeight() / 2);
    }

@@ -1,22 +1,15 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
-public abstract class Tetromino extends Actor {
-
-	
+public abstract class Tetromino extends Actor 
+{
 	protected static final int NORTH = 0;
-
 	protected static final int WEST = 1;
-
 	protected static final int SOUTH = 2;
-
 	protected static final int EAST = 3;
-
 	protected Block[] b; 
 
 	int direction; 
-
 	boolean dead; 
-
 	private int counter; 
 
 	Tetromino(String color) {
