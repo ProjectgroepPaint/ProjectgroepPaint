@@ -3,10 +3,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MovingContainers extends Actor
 {
     // Movingspeed of the Containers.
-    public final int SPEED=2;
+    protected final int SPEED=2;
     
     // Method which makes containers move right and despawn at world edge.
-    public void MoveR() 
+    protected void MoveR() 
     {
         setLocation(getX() +SPEED, getY());
         if (getX()>1490){  
@@ -15,7 +15,7 @@ public class MovingContainers extends Actor
     }
     
     // Method which makes containers move left and despawn at world edge.
-    public void MoveL() 
+    protected void MoveL() 
     {
         setLocation(getX() -SPEED, getY());
         if (getX()<10){  

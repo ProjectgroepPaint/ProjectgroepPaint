@@ -2,11 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class AIRope extends AICrane
 {
-    public int minimum_offsetRope = 946;
-    public int maximum_offsetRope = 1263;
+    protected int minimum_offsetRope = 946;
+    protected int maximum_offsetRope = 1263;
     // X-Coordinates of the left and right bound for AICraneRope.
-    public int minimum_offsetHook = 933;
-    public int maximum_offsetHook = 1250;
+    protected int minimum_offsetHook = 933;
+    protected int maximum_offsetHook = 1250;
     // X-Coordinates of the left and right bound for AICraneHook.
     public static int VERTICAL_MOVEMENT;
     public void act()
@@ -16,7 +16,7 @@ public class AIRope extends AICrane
         AIHookwithcontainer.getVERTICAL_MOVEMENT();
         Ropemove();
     }
-    public void Ropemove() 
+    protected void Ropemove() 
     {
        if(getX() > minimum_offsetRope && moveLeft == true)
        {CranemoveAI(-velocity);}
@@ -33,7 +33,7 @@ public class AIRope extends AICrane
        // Method call to force the rope to stay vertical
        setRotation(0);
     }
-    public void Hookmove() 
+    protected void Hookmove() 
     {
        if(getX() > minimum_offsetHook && moveLeft == true)
        {CranemoveAI(-velocity);}

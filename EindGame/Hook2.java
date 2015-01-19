@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hook2 extends Rope2
 {
     private Game2 Scene;
-    public void addedToWorld(World world) 
+    protected void addedToWorld(World world) 
     {
         Scene = (Game2) world;
     }

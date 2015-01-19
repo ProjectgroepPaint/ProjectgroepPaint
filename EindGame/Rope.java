@@ -2,11 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Rope extends Crane
 {
-    public int minimum_offsetHook = 209;
-    public int maximum_offsetHook = 526;
+    protected int minimum_offsetHook = 209;
+    protected int maximum_offsetHook = 526;
     // X-Coordinates of the left and right bound for PlayerCraneHook.
-    public int minimum_offsetRope = 222;
-    public int maximum_offsetRope = 539;
+    protected int minimum_offsetRope = 222;
+    protected int maximum_offsetRope = 539;
     // X-Coordinates of the left and right bound for PlayerCraneRope.
     private final int VERTICAL_MOVEMENT = 4;
     // UP/DOWN - movement speed.
@@ -14,7 +14,7 @@ public class Rope extends Crane
     {
         Ropemove();
     }
-    public void Ropemove() 
+    protected void Ropemove() 
     {
         // Moves the PlayerRope if the buttons are pressed and the rope is between the minimum and maximum offset.
         if (Greenfoot.isKeyDown("left") && getX()>minimum_offsetRope || Greenfoot.isKeyDown("right") && getX()<maximum_offsetRope)
@@ -31,7 +31,7 @@ public class Rope extends Crane
         // Method call to force the rope to stay vertical
         setRotation(0);
     }
-    public void Hookmove() 
+    protected void Hookmove() 
     {
         // Moves the PlayerHook if the buttons are pressed and the hook is between the minimum and maximum offset.
         if (Greenfoot.isKeyDown("left") && getX()>minimum_offsetHook || Greenfoot.isKeyDown("right") && getX()<maximum_offsetHook)

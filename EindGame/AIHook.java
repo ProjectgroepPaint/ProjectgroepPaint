@@ -3,16 +3,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class AIHook extends AIRope
 {
     private Game2 Scene;
-    public void addedToWorld(World world) 
+    protected void addedToWorld(World world) 
     {Scene = (Game2) world;}
-    public void setVERTICAL_MOVEMENT()
+    private void setVERTICAL_MOVEMENT()
     {
         // Moves hook down.
         if (getY()<875)
         {VERTICAL_MOVEMENT = 4;}
         else {VERTICAL_MOVEMENT = 0;}
     }
-    public static int getVERTICAL_MOVEMENT()
+    protected static int getVERTICAL_MOVEMENT()
     {
         return VERTICAL_MOVEMENT;
     }    

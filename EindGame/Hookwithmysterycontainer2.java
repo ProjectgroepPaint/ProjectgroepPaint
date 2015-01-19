@@ -4,7 +4,7 @@ public class Hookwithmysterycontainer2 extends Hook2
 {
     private Game2 Scene;
     
-    public void addedToWorld(World world) 
+    protected void addedToWorld(World world) 
     {
        Scene = (Game2) world; 
     }

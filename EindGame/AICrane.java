@@ -5,32 +5,32 @@ public class AICrane extends Cranes
     private int minimum_offset = 836;
     private int maximum_offset = 1153;
     // X-Coordinates of the left and right bound for AICrane.
-    public static boolean moveLeft;
-    public static boolean moveRight;
-    public static boolean setmoveRight()
+    protected static boolean moveLeft;
+    protected static boolean moveRight;
+    protected static boolean setmoveRight()
     {
         moveRight = true;
         return moveRight;
         // Sets the boolean which makes the AICrane move right true.
     }
-    public static boolean stopmoveRight()
+    protected static boolean stopmoveRight()
     {
         moveRight = false;
         return moveRight;
         // Sets the boolean which makes the AICrane move right false.
     }
-    public static boolean stopmoveLeft()
+    protected static boolean stopmoveLeft()
     {
         moveLeft = false;
         return moveLeft;
         // Sets the boolean which makes the AICrane move left false.
     }
-    public static boolean getmoveRight()
+    protected static boolean getmoveRight()
     {
         return moveRight;
         // Returns if moveRight is true or false.
     }
-    public static boolean getmoveLeft()
+    protected static boolean getmoveLeft()
     {
         return moveLeft;
         // Returns if moveLeft is true or false.

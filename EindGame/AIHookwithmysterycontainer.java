@@ -3,18 +3,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class AIHookwithmysterycontainer extends AIHook
 {
     private Game2 Scene;
-    public void setVERTICAL_MOVEMENT()
+    private void setVERTICAL_MOVEMENT()
     {
         // Moves hook up.
         if (getY()>340)
         {VERTICAL_MOVEMENT = -6;}
         else {VERTICAL_MOVEMENT = 0;}
     }
-    public static int getVERTICAL_MOVEMENT()
+    protected static int getVERTICAL_MOVEMENT()
     {
         return VERTICAL_MOVEMENT;
     } 
-    public void addedToWorld(World world) 
+    protected void addedToWorld(World world) 
     {
        Scene = (Game2) world; 
     }
