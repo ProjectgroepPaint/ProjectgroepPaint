@@ -91,16 +91,16 @@ public class Game2 extends World
         }
     }
     // Adds points to the scores.
-    public void addScore(int n) {
+    protected void addScore(int n) {
         this.score = score + n;
         this.showText("Score: " + String.valueOf(score), 400, 200);
     }
-    public void addScore2(int m) {
+    protected void addScore2(int m) {
         this.score2 = score2 + m;
         this.showText("Score: " + String.valueOf(score2), 1000, 200);
     }
     // Sets the end of the game.
-    public void End(int l) {
+    protected void End(int l) {
         this.Time = Time + l;
     }
 }
