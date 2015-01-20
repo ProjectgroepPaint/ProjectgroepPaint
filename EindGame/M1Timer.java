@@ -22,7 +22,14 @@ public class M1Timer extends Actor
             time--;  
             count = 60;  
         }  
-        display();  
+        display();
+        
+        // Removes instructions after 10 seconds.
+        if(time == 80 && getWorld().getObjects(InstructionsM1.class).size() != 0)
+        {
+            Actor Instructions = (Actor)getWorld().getObjects(InstructionsM1.class).get(0);
+            getWorld().removeObject(Instructions);
+        }
     }      
     private boolean counter()  
     {  

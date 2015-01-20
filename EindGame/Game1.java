@@ -33,8 +33,11 @@ public class Game1 extends World
         M1Rope rope = new M1Rope(ship, ship2);
         this.addObject(rope, 1, 1);
         
+        // Adds Instructions.
+        addObject(new InstructionsM1(), 622, 28);
+        
         // Sets which class shows on top.
-        setPaintOrder(button5.class,M1GameOver.class,M1finish.class,M1Timer.class,M1Ship.class,M1Rope.class,M1Land.class,M1Obstacle.class);
+        setPaintOrder(InstructionsM1.class,button5.class,M1GameOver.class,M1finish.class,M1Timer.class,M1Ship.class,M1Rope.class,M1Land.class,M1Obstacle.class);
     }
     public void act() 
     {

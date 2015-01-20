@@ -22,7 +22,21 @@ public class TimerGame2 extends Actor
              // Decreases the time on the timer.
              
              count = 60;  
-           }  
+           }
+           // Removes instructions for player1 after 10 seconds.
+           if(time == 50 && getWorld().getObjects(InstructionsM2P1.class).size() != 0)
+           {
+               
+               Actor Instructions = (Actor)getWorld().getObjects(InstructionsM2P1.class).get(0);
+               getWorld().removeObject(Instructions);
+           }
+           // Removes instructions for player2 after 10 seconds.
+           if(time == 50 && getWorld().getObjects(InstructionsM2P2.class).size() != 0)
+           {
+               // Removes instructions for player1.
+               Actor Instructions2 = (Actor)getWorld().getObjects(InstructionsM2P2.class).get(0);
+               getWorld().removeObject(Instructions2);
+           }
            display();  
        }
        private boolean counter()

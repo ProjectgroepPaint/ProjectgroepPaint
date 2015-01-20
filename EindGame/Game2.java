@@ -30,8 +30,11 @@ public class Game2 extends World
         // Adding button to return to the menu the world.
         addObject(new button5(), 39, 963);
         
+        // Adds Instructions for player1.
+        addObject(new InstructionsM2P1(), 269, 102);
+        
         // Sets which class shows on top.       
-        setPaintOrder(button5.class,Win.class,Lose.class,TimerGame2.class,Crane.class,Crane2.class,AICrane.class,Sky.class,Rope.class,Rope2.class,AIRope.class,ShipGame2.class);
+        setPaintOrder(InstructionsM2P1.class,InstructionsM2P2.class,button5.class,Win.class,Lose.class,TimerGame2.class,Crane.class,Crane2.class,AICrane.class,Sky.class,Rope.class,Rope2.class,AIRope.class,ShipGame2.class);
         
         this.showText("Score: " + String.valueOf(score), 400, 200);
         this.showText("Score: " + String.valueOf(score2), 1000, 200);
