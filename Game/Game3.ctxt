@@ -1,5 +1,21 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Game3()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Game3.\r\n\ \r\n
-numComments=1
+comment1.params=cols\ rows
+comment1.target=Game3(int,\ int)
+comment1.text=\r\n\ Creates\ a\ tetris\ world\ with\ "cols"\ columns\ and\ "rows"\ rows\r\n\ \r\n\ @param\ cols\r\n\ \ \ \ \ \ \ \ \ \ \ \ number\ of\ columns\ (>\=\ 9)\r\n\ @param\ rows\r\n\ \ \ \ \ \ \ \ \ \ \ \ number\ of\ rows\ (>\=\ 10)\r\n
+comment2.params=
+comment2.target=Game3\ getWorld()
+comment3.params=
+comment3.target=Tetromino\ getCurrentTetromino()
+comment4.params=t
+comment4.target=void\ setCurrentTetromino(Tetromino)
+comment5.params=
+comment5.target=Tetromino\ genTetromino()
+comment6.params=rows
+comment6.target=void\ newPoints(int)
+comment7.params=
+comment7.target=int\ getPoints()
+comment8.params=
+comment8.target=void\ gameOver()
+numComments=9

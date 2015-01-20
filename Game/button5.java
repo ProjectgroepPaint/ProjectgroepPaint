@@ -1,22 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class button5 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class button5 extends Actor
 {
-    /**
-     * Act - do whatever the button5 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         if (Greenfoot.mouseClicked(this))  
         {  
-            Greenfoot.setWorld(new Menu());  
+            // Sets world back to the menu.
+            Greenfoot.setWorld(new Menu());
+            
+            // Resets the background and obstaclespeed of game1.
+            Game1.ResetBGSpeed();
+            M1Obstacle.Reset();
         }
     }    
 }

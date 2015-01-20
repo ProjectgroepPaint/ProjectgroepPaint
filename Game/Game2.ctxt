@@ -1,5 +1,12 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Game2()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Game2.\r\n\ \r\n
-numComments=1
+comment1.params=
+comment1.target=void\ act()
+comment2.params=n
+comment2.target=void\ addScore(int)
+comment3.params=m
+comment3.target=void\ addScore2(int)
+comment4.params=l
+comment4.target=void\ End(int)
+numComments=5

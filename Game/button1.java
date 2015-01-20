@@ -1,22 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class button1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class button1 extends Actor
 {
-    /**
-     * Act - do whatever the button1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-     public void act()   
-    {  
+    public void act() 
+    {
         if (Greenfoot.mouseClicked(this))  
         {  
-            Greenfoot.setWorld(new Water());  
-        }  
+            Greenfoot.setWorld(new Game1());
+            // Sets world to game1.
+        }
     }    
 }
