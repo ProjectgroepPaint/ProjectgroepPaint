@@ -2,7 +2,8 @@ import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 
 public class OTetromino extends Tetromino {
-	OTetromino() {
+	// Sets color to block which is used to get the right image with the right block.
+    OTetromino() {
 		super("blue");
 	}
 

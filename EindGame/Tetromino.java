@@ -134,7 +134,7 @@ public abstract class Tetromino extends Actor
 		return true;
 	}
 
-	// right shif possible?
+	// right shift possible?
 	boolean rightOccupied() {
 		if (rightMost().getX() == Game3.getWorld().getWidth() - 1) {
 			return true;

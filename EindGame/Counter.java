@@ -6,12 +6,12 @@ import java.awt.Font;
 
 public class Counter extends Actor
 {
-    private static final Color textColor = new Color(0, 0, 0);
+   private static final Color textColor = new Color(0, 0, 0);
     
-    private int value = 0;
-    private String text;
+   private int value = 0;
+   private String text;
 
-    // Creat a Counter
+   // Create a Counter
    public Counter()
     {
         this("");

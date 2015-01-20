@@ -2,6 +2,7 @@ import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 
 
 public class LTetromino extends Tetromino {
+    // Sets color to block which is used to get the right image with the right block.
     LTetromino() {
         super("magenta");
     }
@@ -66,7 +67,7 @@ public class LTetromino extends Tetromino {
             return b[3];
         }
     }
-
+    // Checks if its possible to turn the block.
     protected boolean turnPossible() {
         Game3 world = Game3.getWorld();
         switch (direction) {
